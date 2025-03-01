@@ -1,0 +1,17 @@
+server:
+  port: 9040
+
+spring:
+  application:
+    name: pcmis-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: pcmis
+        group: pcmis
+      
+feign:
+  sentinel:
+    enabled: true
+

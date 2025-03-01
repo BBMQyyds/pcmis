@@ -1,0 +1,127 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: pcmis-gateway
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+      eager: true
+      scg:
+        fallback:
+          response-body: '{"code":-666, "data":null, "msg":"前方拥堵，请稍后重试"}'
+          mode: response
+          response-status: 500
+      datasource:
+        flow-control:
+          nacos:
+            username: nacos
+            password: 2003
+            server-addr: localhost:8848
+            data-id: gateway-sentinel-flow
+            data-type: json
+            group-id: pcmis
+            namespace: pcmis
+            rule-type: flow
+        degrade-control:
+          nacos:
+            username: nacos
+            password: 2003
+            server-addr: localhost:8848
+            data-id: gateway-sentinel-degrade
+            data-type: json
+            group-id: pcmis
+            namespace: pcmis
+            rule-type: degrade
+        param-control:
+          nacos:
+            username: nacos
+            password: 2003
+            server-addr: localhost:8848
+            data-id: gateway-sentinel-param
+            data-type: json
+            group-id: pcmis
+            namespace: pcmis
+            rule-type: param-flow
+#        system-control:
+#            nacos:
+#                username: nacos
+#                password: 2003
+#                server-addr: localhost:8848
+#                data-id: gateway-sentinel-system
+#                data-type: json
+#                group-id: pcmis
+#                namespace: pcmis
+#                rule-type: system
+        authority-control:
+            nacos:
+                username: nacos
+                password: 2003
+                server-addr: localhost:8848
+                data-id: gateway-sentinel-authority
+                data-type: json
+                group-id: pcmis
+                namespace: pcmis
+                rule-type: authority
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: pcmis
+        group: pcmis
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+
+gateway:
+  routes:
+    config:
+      data-id: gateway-routes
+      group: pcmis
+      namespace: pcmis
+
+logging:
+  level:
+    org.springframework.cloud.gateway.route.CachingRouteLocator: off
+
+
+#        - id: pcmis-case
+#          uri: lb://pcmis-case
+#          predicates:
+#            - Path=/case/**
+#
+#        - id: pcmis-file
+#          uri: lb://pcmis-file
+#          predicates:
+#            - Path=/file/**
+#
+#        - id: pcmis-project
+#          uri: lb://pcmis-project
+#          predicates:
+#            - Path=/project/**
+#
+#        - id: pcmis-risk
+#          uri: lb://pcmis-risk
+#          predicates:
+#            - Path=/risk/**
+#
+#        - id: pcmis-security
+#          uri: lb://pcmis-security
+#          predicates:
+#            - Path=/security/**
+#
+#        - id: pcmis-user
+#          uri: lb://pcmis-user
+#          predicates:
+#            - Path=/user/**
+#
+#        - id: pcmis-visual
+#          uri: lb://pcmis-visual
+#          predicates:
+#            - Path=/visual/**
