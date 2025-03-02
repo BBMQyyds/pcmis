@@ -1,0 +1,188 @@
+2025-03-02 13:27:39.698 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.2.Final
+2025-03-02 13:27:40.927 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - [initialize,109] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-pcmis-gateway.yml,pcmis'}, BootstrapPropertySource {name='bootstrapProperties-pcmis-gateway,pcmis'}, BootstrapPropertySource {name='bootstrapProperties-pcmis-gateway.yaml,pcmis'}]
+2025-03-02 13:27:40.951 [main] INFO  c.l.g.GatewayApplication - [logStartupProfileInfo,640] - No active profile set, falling back to 1 default profile: "default"
+2025-03-02 13:27:41.857 [main] INFO  o.s.c.c.s.GenericScope - [setSerializationId,283] - BeanFactory id=f9518eef-3034-3bc0-a826-c427b2607726
+2025-03-02 13:27:42.279 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.284 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.285 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$566/0x00000008010b2b00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.286 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.423 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForCharSequence' of type [org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForCharSequence] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.430 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'org.hibernate.validator.internal.constraintvalidators.bv.NotNullValidator' of type [org.hibernate.validator.internal.constraintvalidators.bv.NotNullValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.476 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.582 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.586 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.588 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.590 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [postProcessAfterInitialization,376] - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-02 13:27:42.858 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [initialize,108] - Tomcat initialized with port(s): 9100 (http)
+2025-03-02 13:27:42.874 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-03-02 13:27:42.874 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+2025-03-02 13:27:42.875 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2025-03-02 13:27:43.899 [main] INFO  c.a.c.s.g.s.SentinelSCGAutoConfiguration - [initFallback,111] - [Sentinel SpringCloudGateway] using AnonymousBlockRequestHandler, responseStatus: 500, responseBody: {"code":-666, "data":null, "msg":"前方拥堵，请稍后重试"}
+2025-03-02 13:27:43.900 [main] INFO  c.a.c.s.g.s.SentinelSCGAutoConfiguration - [sentinelGatewayFilter,144] - [Sentinel SpringCloudGateway] register SentinelGatewayFilter with order: -2147483648
+2025-03-02 13:27:45.886 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [After]
+2025-03-02 13:27:45.886 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Before]
+2025-03-02 13:27:45.886 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Between]
+2025-03-02 13:27:45.886 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Cookie]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Header]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Host]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Method]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Path]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Query]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [ReadBody]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [RemoteAddr]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [Weight]
+2025-03-02 13:27:45.887 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - [lambda$initFactories$1,88] - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-03-02 13:27:46.159 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+2025-03-02 13:27:46.273 [main] INFO  c.a.d.p.DruidDataSource - [init,990] - {dataSource-1} inited
+2025-03-02 13:27:47.084 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] gateway-sentinel-authority+pcmis+pcmis
+2025-03-02 13:27:47.086 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=gateway-sentinel-authority, group=pcmis, cnt=1
+2025-03-02 13:27:47.281 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] gateway-sentinel-degrade+pcmis+pcmis
+2025-03-02 13:27:47.282 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=gateway-sentinel-degrade, group=pcmis, cnt=1
+2025-03-02 13:27:47.482 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] gateway-sentinel-flow+pcmis+pcmis
+2025-03-02 13:27:47.482 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=gateway-sentinel-flow, group=pcmis, cnt=1
+2025-03-02 13:27:47.678 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] gateway-sentinel-param+pcmis+pcmis
+2025-03-02 13:27:47.678 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=gateway-sentinel-param, group=pcmis, cnt=1
+2025-03-02 13:27:47.749 [main] INFO  c.a.n.client.naming - [call,65] - initializer namespace from System Property :null
+2025-03-02 13:27:47.750 [main] INFO  c.a.n.client.naming - [call,74] - initializer namespace from System Environment :null
+2025-03-02 13:27:47.750 [main] INFO  c.a.n.client.naming - [call,84] - initializer namespace from System Property :null
+2025-03-02 13:27:47.787 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9100"]
+2025-03-02 13:27:47.822 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [start,220] - Tomcat started on port(s): 9100 (http) with context path ''
+2025-03-02 13:27:47.867 [boundedElastic-5] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-file -> [{"instanceId":"172.22.71.182#9080#DEFAULT#pcmis@@pcmis-file","ip":"172.22.71.182","port":9080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-file","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:47.872 [boundedElastic-5] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-file -> [{"instanceId":"172.22.71.182#9080#DEFAULT#pcmis@@pcmis-file","ip":"172.22.71.182","port":9080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-file","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:49.005 [main] INFO  c.a.n.client.naming - [addBeatInfo,81] - [BEAT] adding beat: BeatInfo{port=9100, ip='172.22.71.182', weight=1.0, serviceName='pcmis@@pcmis-gateway', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2025-03-02 13:27:49.006 [main] INFO  c.a.n.client.naming - [registerService,230] - [REGISTER-SERVICE] pcmis registering service pcmis@@pcmis-gateway with instance: Instance{instanceId='null', ip='172.22.71.182', port=9100, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2025-03-02 13:27:49.009 [main] INFO  c.a.c.n.r.NacosServiceRegistry - [register,75] - nacos registry, pcmis pcmis-gateway 172.22.71.182:9100 register finished
+2025-03-02 13:27:49.017 [main] INFO  c.l.g.c.GatewayRouteInitConfig - [init,42] - 开始网关动态路由初始化...
+2025-03-02 13:27:49.026 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] gateway-routes+pcmis+pcmis
+2025-03-02 13:27:49.027 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=gateway-routes, group=pcmis, cnt=1
+2025-03-02 13:27:49.027 [main] INFO  c.l.g.c.GatewayRouteInitConfig - [init,71] - 获取网关当前动态路由配置:
+[
+    {
+        "id": "pcmis-case",
+        "uri": "lb://pcmis-case",
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/case/**"
+                },
+                "name": "Path"
+            }
+        ]
+    },
+    {
+        "id": "pcmis-file",
+        "uri": "lb://pcmis-file",
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/file/**"
+                },
+                "name": "Path"
+            }
+        ]
+    },
+    {
+        "id": "pcmis-project",
+        "uri": "lb://pcmis-project",
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/project/**"
+                },
+                "name": "Path"
+            }
+        ]
+    },
+    {
+        "id": "pcmis-risk",
+        "uri": "lb://pcmis-risk",
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/risk/**"
+                },
+                "name": "Path"
+            }
+        ]
+    },
+    {
+        "id": "pcmis-security",
+        "uri": "lb://pcmis-security",
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/security/**"
+                },
+                "name": "Path"
+            }
+        ]
+    },
+    {
+        "id": "pcmis-user",
+        "uri": "lb://pcmis-user",
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/testUser/**"
+                },
+                "name": "Path"
+            }
+        ]
+    },
+    {
+        "id": "pcmis-visual",
+        "uri": "lb://pcmis-visual",
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/visual/**"
+                },
+                "name": "Path"
+            }
+        ]
+    }
+]
+
+2025-03-02 13:27:49.033 [main] INFO  c.l.g.s.i.RouteServiceImpl - [add,33] - 新增路由配置项：RouteDefinition{id='pcmis-case', predicates=[PredicateDefinition{name='Path', args={pattern=/case/**}}], filters=[], uri=lb://pcmis-case, order=0, metadata={}}
+2025-03-02 13:27:49.035 [main] INFO  c.l.g.s.i.RouteServiceImpl - [add,33] - 新增路由配置项：RouteDefinition{id='pcmis-file', predicates=[PredicateDefinition{name='Path', args={pattern=/file/**}}], filters=[], uri=lb://pcmis-file, order=0, metadata={}}
+2025-03-02 13:27:49.036 [main] INFO  c.l.g.s.i.RouteServiceImpl - [add,33] - 新增路由配置项：RouteDefinition{id='pcmis-project', predicates=[PredicateDefinition{name='Path', args={pattern=/project/**}}], filters=[], uri=lb://pcmis-project, order=0, metadata={}}
+2025-03-02 13:27:49.037 [main] INFO  c.l.g.s.i.RouteServiceImpl - [add,33] - 新增路由配置项：RouteDefinition{id='pcmis-risk', predicates=[PredicateDefinition{name='Path', args={pattern=/risk/**}}], filters=[], uri=lb://pcmis-risk, order=0, metadata={}}
+2025-03-02 13:27:49.038 [main] INFO  c.l.g.s.i.RouteServiceImpl - [add,33] - 新增路由配置项：RouteDefinition{id='pcmis-security', predicates=[PredicateDefinition{name='Path', args={pattern=/security/**}}], filters=[], uri=lb://pcmis-security, order=0, metadata={}}
+2025-03-02 13:27:49.040 [main] INFO  c.l.g.s.i.RouteServiceImpl - [add,33] - 新增路由配置项：RouteDefinition{id='pcmis-user', predicates=[PredicateDefinition{name='Path', args={pattern=/testUser/**}}], filters=[], uri=lb://pcmis-user, order=0, metadata={}}
+2025-03-02 13:27:49.040 [main] INFO  c.l.g.s.i.RouteServiceImpl - [add,33] - 新增路由配置项：RouteDefinition{id='pcmis-visual', predicates=[PredicateDefinition{name='Path', args={pattern=/visual/**}}], filters=[], uri=lb://pcmis-visual, order=0, metadata={}}
+2025-03-02 13:27:49.041 [main] INFO  c.l.g.c.GatewayRouteInitConfig - [init,81] - 结束网关动态路由初始化...
+2025-03-02 13:27:49.054 [main] INFO  c.l.g.GatewayApplication - [logStarted,61] - Started GatewayApplication in 10.477 seconds (JVM running for 11.397)
+2025-03-02 13:27:49.063 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] pcmis-gateway.yml+pcmis+pcmis
+2025-03-02 13:27:49.063 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=pcmis-gateway.yml, group=pcmis, cnt=1
+2025-03-02 13:27:49.063 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListenersForApplications,105] - listening config: dataId=pcmis-gateway.yml, group=pcmis
+2025-03-02 13:27:49.065 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] pcmis-gateway.yaml+pcmis+pcmis
+2025-03-02 13:27:49.065 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=pcmis-gateway.yaml, group=pcmis, cnt=1
+2025-03-02 13:27:49.065 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListenersForApplications,105] - listening config: dataId=pcmis-gateway.yaml, group=pcmis
+2025-03-02 13:27:49.066 [main] INFO  c.a.n.c.c.i.ClientWorker - [addCacheDataIfAbsent,169] - [fixed-localhost_8848-pcmis] [subscribe] pcmis-gateway+pcmis+pcmis
+2025-03-02 13:27:49.066 [main] INFO  c.a.n.c.c.i.CacheData - [addListener,92] - [fixed-localhost_8848-pcmis] [add-listener] ok, tenant=pcmis, dataId=pcmis-gateway, group=pcmis, cnt=1
+2025-03-02 13:27:49.066 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListenersForApplications,105] - listening config: dataId=pcmis-gateway, group=pcmis
+2025-03-02 13:27:50.014 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.22.71.182\",\"port\":9100,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9100#DEFAULT#pcmis@@pcmis-gateway\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-gateway\",\"ephemeral\":true}],\"dom\":\"pcmis@@pcmis-gateway\",\"name\":\"pcmis@@pcmis-gateway\",\"cacheMillis\":10000,\"lastRefTime\":1740893270013,\"checksum\":\"139bf0c90bc26a40ed15af2d0e21137c\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":158410013277800} from /172.22.71.182
+2025-03-02 13:27:50.017 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-gateway -> [{"instanceId":"172.22.71.182#9100#DEFAULT#pcmis@@pcmis-gateway","ip":"172.22.71.182","port":9100,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:50.018 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-gateway -> [{"instanceId":"172.22.71.182#9100#DEFAULT#pcmis@@pcmis-gateway","ip":"172.22.71.182","port":9100,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:50.019 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.22.71.182\",\"port\":9100,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9100#DEFAULT#pcmis@@pcmis-gateway\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-gateway\",\"ephemeral\":true}],\"dom\":\"pcmis@@pcmis-gateway\",\"name\":\"pcmis@@pcmis-gateway\",\"cacheMillis\":10000,\"lastRefTime\":1740893270014,\"checksum\":\"139bf0c90bc26a40ed15af2d0e21137c\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":158410013277800} from /172.22.71.182
+2025-03-02 13:27:50.020 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-gateway@@DEFAULT -> [{"instanceId":"172.22.71.182#9100#DEFAULT#pcmis@@pcmis-gateway","ip":"172.22.71.182","port":9100,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:50.022 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-gateway@@DEFAULT -> [{"instanceId":"172.22.71.182#9100#DEFAULT#pcmis@@pcmis-gateway","ip":"172.22.71.182","port":9100,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:50.895 [com.alibaba.nacos.client.naming.updater] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-user -> [{"instanceId":"172.22.71.182#9040#DEFAULT#pcmis@@pcmis-user","ip":"172.22.71.182","port":9040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-user","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:50.898 [com.alibaba.nacos.client.naming.updater] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-user -> [{"instanceId":"172.22.71.182#9040#DEFAULT#pcmis@@pcmis-user","ip":"172.22.71.182","port":9040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-user","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:51.318 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.22.71.182\",\"port\":9040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9040#DEFAULT#pcmis@@pcmis-user\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-user\",\"ephemeral\":true}],\"dom\":\"pcmis@@pcmis-user\",\"name\":\"pcmis@@pcmis-user\",\"cacheMillis\":10000,\"lastRefTime\":1740893271317,\"checksum\":\"bfc309cef0b391f76338169afc97397e\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":158411317860600} from /172.22.71.182
+2025-03-02 13:27:53.481 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.22.71.182\",\"port\":9040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9040#DEFAULT#pcmis@@pcmis-user\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-user\",\"ephemeral\":true},{\"ip\":\"172.22.71.182\",\"port\":9041,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9041#DEFAULT#pcmis@@pcmis-user\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-user\",\"ephemeral\":true}],\"dom\":\"pcmis@@pcmis-user\",\"name\":\"pcmis@@pcmis-user\",\"cacheMillis\":10000,\"lastRefTime\":1740893273480,\"checksum\":\"d65731c846d98609a5e65cf291c7e682\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":158413481227700} from /172.22.71.182
+2025-03-02 13:27:53.482 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-user -> [{"instanceId":"172.22.71.182#9041#DEFAULT#pcmis@@pcmis-user","ip":"172.22.71.182","port":9041,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-user","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:53.484 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(2) service: pcmis@@pcmis-user -> [{"instanceId":"172.22.71.182#9040#DEFAULT#pcmis@@pcmis-user","ip":"172.22.71.182","port":9040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-user","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"172.22.71.182#9041#DEFAULT#pcmis@@pcmis-user","ip":"172.22.71.182","port":9041,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-user","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:58.235 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.22.71.182\",\"port\":9090,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9090#DEFAULT#pcmis@@pcmis-case\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-case\",\"ephemeral\":true}],\"dom\":\"pcmis@@pcmis-case\",\"name\":\"pcmis@@pcmis-case\",\"cacheMillis\":10000,\"lastRefTime\":1740893278235,\"checksum\":\"b07b5fcfadec1e69edb26caf878fdf2e\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":158418234843300} from /172.22.71.182
+2025-03-02 13:27:58.236 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-case -> [{"instanceId":"172.22.71.182#9090#DEFAULT#pcmis@@pcmis-case","ip":"172.22.71.182","port":9090,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-case","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:27:58.238 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-case -> [{"instanceId":"172.22.71.182#9090#DEFAULT#pcmis@@pcmis-case","ip":"172.22.71.182","port":9090,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-case","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:02.890 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.22.71.182\",\"port\":9070,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9070#DEFAULT#pcmis@@pcmis-project\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-project\",\"ephemeral\":true}],\"dom\":\"pcmis@@pcmis-project\",\"name\":\"pcmis@@pcmis-project\",\"cacheMillis\":10000,\"lastRefTime\":1740893282889,\"checksum\":\"3e6bba610c1e55d3523a14132ee6be73\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":158422889681100} from /172.22.71.182
+2025-03-02 13:28:02.890 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-project -> [{"instanceId":"172.22.71.182#9070#DEFAULT#pcmis@@pcmis-project","ip":"172.22.71.182","port":9070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-project","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:02.892 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-project -> [{"instanceId":"172.22.71.182#9070#DEFAULT#pcmis@@pcmis-project","ip":"172.22.71.182","port":9070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-project","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:27.987 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.22.71.182\",\"port\":9060,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.22.71.182#9060#DEFAULT#pcmis@@pcmis-risk\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"pcmis@@pcmis-risk\",\"ephemeral\":true}],\"dom\":\"pcmis@@pcmis-risk\",\"name\":\"pcmis@@pcmis-risk\",\"cacheMillis\":10000,\"lastRefTime\":1740893307986,\"checksum\":\"3f2a59352b0233d3be15ddb167351fb0\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":158447986697800} from /172.22.71.182
+2025-03-02 13:28:27.988 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-risk -> [{"instanceId":"172.22.71.182#9060#DEFAULT#pcmis@@pcmis-risk","ip":"172.22.71.182","port":9060,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-risk","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:27.990 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-risk -> [{"instanceId":"172.22.71.182#9060#DEFAULT#pcmis@@pcmis-risk","ip":"172.22.71.182","port":9060,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-risk","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:50.948 [com.alibaba.nacos.client.naming.updater] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-security -> [{"instanceId":"172.22.71.182#9050#DEFAULT#pcmis@@pcmis-security","ip":"172.22.71.182","port":9050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-security","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:50.948 [com.alibaba.nacos.client.naming.updater] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: pcmis@@pcmis-visual -> [{"instanceId":"172.22.71.182#9030#DEFAULT#pcmis@@pcmis-visual","ip":"172.22.71.182","port":9030,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-visual","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:50.950 [com.alibaba.nacos.client.naming.updater] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-visual -> [{"instanceId":"172.22.71.182#9030#DEFAULT#pcmis@@pcmis-visual","ip":"172.22.71.182","port":9030,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-visual","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-03-02 13:28:50.950 [com.alibaba.nacos.client.naming.updater] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: pcmis@@pcmis-security -> [{"instanceId":"172.22.71.182#9050#DEFAULT#pcmis@@pcmis-security","ip":"172.22.71.182","port":9050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"pcmis@@pcmis-security","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]

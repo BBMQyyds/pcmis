@@ -7,6 +7,6 @@ public class TestUserCaseOpenfeignHandler implements TestUserCaseOpenfeign {
 
     @Override
     public String openfeignTest(String data) {
-        return "当前人数过多,休息一会再试";
+        return "请检查数据是否正确";
     }
 }
