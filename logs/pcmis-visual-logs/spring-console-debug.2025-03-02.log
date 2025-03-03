@@ -41,23 +41,23 @@ mybatis-plus:
 2025-03-02 13:28:33.240 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
 2025-03-02 13:28:33.240 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
 2025-03-02 13:28:33.240 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
-2025-03-02 13:28:33.418 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.insert
-2025-03-02 13:28:33.422 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.delete
-2025-03-02 13:28:33.425 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.deleteByMap
-2025-03-02 13:28:33.454 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.deleteById
-2025-03-02 13:28:33.456 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.deleteBatchIds
-2025-03-02 13:28:33.459 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.update
-2025-03-02 13:28:33.462 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.updateById
-2025-03-02 13:28:33.463 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectById
-2025-03-02 13:28:33.465 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectBatchIds
-2025-03-02 13:28:33.469 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectByMap
-2025-03-02 13:28:33.472 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectOne
-2025-03-02 13:28:33.475 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectCount
-2025-03-02 13:28:33.478 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectMaps
-2025-03-02 13:28:33.481 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectMapsPage
-2025-03-02 13:28:33.483 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectObjs
-2025-03-02 13:28:33.486 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectList
-2025-03-02 13:28:33.488 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.CaseProcessMapper.selectPage
+2025-03-02 13:28:33.418 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.insert
+2025-03-02 13:28:33.422 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.delete
+2025-03-02 13:28:33.425 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.deleteByMap
+2025-03-02 13:28:33.454 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.deleteById
+2025-03-02 13:28:33.456 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.deleteBatchIds
+2025-03-02 13:28:33.459 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.update
+2025-03-02 13:28:33.462 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.updateById
+2025-03-02 13:28:33.463 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectById
+2025-03-02 13:28:33.465 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectBatchIds
+2025-03-02 13:28:33.469 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectByMap
+2025-03-02 13:28:33.472 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectOne
+2025-03-02 13:28:33.475 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectCount
+2025-03-02 13:28:33.478 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectMaps
+2025-03-02 13:28:33.481 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectMapsPage
+2025-03-02 13:28:33.483 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectObjs
+2025-03-02 13:28:33.486 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectList
+2025-03-02 13:28:33.488 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.visual.dao.StatReportMapper.selectPage
 2025-03-02 13:28:33.730 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
 	c.l.v.c.HelloWorldController:
 	{GET [/visual1/getUserConfigTest]}: getUserConfigTest()

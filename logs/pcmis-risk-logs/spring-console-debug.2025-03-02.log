@@ -41,23 +41,23 @@ mybatis-plus:
 2025-03-02 13:28:24.672 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
 2025-03-02 13:28:24.673 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
 2025-03-02 13:28:24.673 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
-2025-03-02 13:28:24.869 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.insert
-2025-03-02 13:28:24.874 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.delete
-2025-03-02 13:28:24.878 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.deleteByMap
-2025-03-02 13:28:24.908 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.deleteById
-2025-03-02 13:28:24.911 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.deleteBatchIds
-2025-03-02 13:28:24.917 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.update
-2025-03-02 13:28:24.920 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.updateById
-2025-03-02 13:28:24.921 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectById
-2025-03-02 13:28:24.923 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectBatchIds
-2025-03-02 13:28:24.925 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectByMap
-2025-03-02 13:28:24.928 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectOne
-2025-03-02 13:28:24.932 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectCount
-2025-03-02 13:28:24.934 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectMaps
-2025-03-02 13:28:24.937 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectMapsPage
-2025-03-02 13:28:24.939 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectObjs
-2025-03-02 13:28:24.941 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectList
-2025-03-02 13:28:24.945 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.CaseMapper.selectPage
+2025-03-02 13:28:24.869 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.insert
+2025-03-02 13:28:24.874 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.delete
+2025-03-02 13:28:24.878 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.deleteByMap
+2025-03-02 13:28:24.908 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.deleteById
+2025-03-02 13:28:24.911 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.deleteBatchIds
+2025-03-02 13:28:24.917 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.update
+2025-03-02 13:28:24.920 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.updateById
+2025-03-02 13:28:24.921 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectById
+2025-03-02 13:28:24.923 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectBatchIds
+2025-03-02 13:28:24.925 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectByMap
+2025-03-02 13:28:24.928 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectOne
+2025-03-02 13:28:24.932 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectCount
+2025-03-02 13:28:24.934 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectMaps
+2025-03-02 13:28:24.937 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectMapsPage
+2025-03-02 13:28:24.939 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectObjs
+2025-03-02 13:28:24.941 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectList
+2025-03-02 13:28:24.945 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.risk.dao.RiskAssessmentMapper.selectPage
 2025-03-02 13:28:25.233 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
 	c.l.r.c.HelloWorldController:
 	{GET [/risk1/getUserConfigTest]}: getUserConfigTest()

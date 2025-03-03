@@ -1,0 +1,54 @@
+{
+  "caseTypeList": [
+    {
+      "caseId": 1,
+      "projectId": 1,
+      "complainTime": "2025-03-01T10:00:00.000+00:00",
+      "complainant": "王小明",
+      "complainAmount": 50.00,
+      "complainPeopleNum": 3,
+      "respondent": "某建筑公司",
+      "caseType": "工程建设",
+      "currentStatus": "处理中",
+      "handlerId": 4,
+      "resolveAmount": 20.00,
+      "resolvePeopleNum": 1,
+      "createTime": "2025-03-03T15:52:29.000+00:00",
+      "updateTime": "2025-03-03T15:52:29.000+00:00"
+    },
+    {
+      "caseId": 2,
+      "projectId": 2,
+      "complainTime": "2025-03-02T14:30:00.000+00:00",
+      "complainant": "李大军",
+      "complainAmount": 80.00,
+      "complainPeopleNum": 5,
+      "respondent": "某施工单位",
+      "caseType": "工程建设",
+      "currentStatus": "待受理",
+      "handlerId": 4,
+      "resolveAmount": 0.00,
+      "resolvePeopleNum": 0,
+      "createTime": "2025-03-03T15:52:29.000+00:00",
+      "updateTime": "2025-03-03T15:52:29.000+00:00"
+    }
+  ],
+  "caseList": [
+    {
+      "caseId": 2,
+      "projectId": 2,
+      "complainTime": "2025-03-02T14:30:00.000+00:00",
+      "complainant": "李大军",
+      "complainAmount": 80.00,
+      "complainPeopleNum": 5,
+      "respondent": "某施工单位",
+      "caseType": "工程建设",
+      "currentStatus": "待受理",
+      "handlerId": 4,
+      "resolveAmount": 0.00,
+      "resolvePeopleNum": 0,
+      "createTime": "2025-03-03T15:52:29.000+00:00",
+      "updateTime": "2025-03-03T15:52:29.000+00:00"
+    }
+  ]
+}

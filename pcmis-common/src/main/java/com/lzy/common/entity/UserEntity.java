@@ -19,12 +19,17 @@ public class UserEntity {
 
     private String mobile;
 
+    private String email;
+
     private String realName;
 
     private Integer roleId;
 
+    private String department;
+
+    private String position;
+
     private Date createTime;
 
     private Date updateTime;
-
 }

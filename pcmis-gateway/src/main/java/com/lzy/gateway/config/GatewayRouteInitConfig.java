@@ -52,7 +52,7 @@ public class GatewayRouteInitConfig {
                         log.info("接收到网关路由更新配置：\r\n{}", configInfo);
                         List<RouteDefinition> routeDefinitions = null;
                         try {
-                            routeDefinitions = objectMapper.readValue(configInfo, new TypeReference<List<RouteDefinition>>() {
+                            routeDefinitions = objectMapper.readValue(configInfo, new TypeReference<>() {
                             });
                         } catch (JsonProcessingException e) {
                             log.error("解析路由配置出错，" + e.getMessage(), e);
@@ -67,7 +67,7 @@ public class GatewayRouteInitConfig {
             });
             log.info("获取网关当前动态路由配置:\r\n{}", initConfigInfo);
             if (StringUtils.isNotEmpty(initConfigInfo)) {
-                List<RouteDefinition> routeDefinitions = objectMapper.readValue(initConfigInfo, new TypeReference<List<RouteDefinition>>() {
+                List<RouteDefinition> routeDefinitions = objectMapper.readValue(initConfigInfo, new TypeReference<>() {
                 });
                 for (RouteDefinition definition : routeDefinitions) {
                     routeService.add(definition);

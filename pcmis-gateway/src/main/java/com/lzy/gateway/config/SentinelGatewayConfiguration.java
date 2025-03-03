@@ -49,16 +49,6 @@ public class SentinelGatewayConfiguration {
         return new SentinelGatewayBlockExceptionHandler(viewResolvers, serverCodecConfigurer);
     }
 
-    /**
-     * 自定义响应参数
-     *
-     * @return
-     */
-//    @Bean
-//    @Order(Ordered.HIGHEST_PRECEDENCE)
-//    public JsonSentinelGatewayBlockExceptionHandler jsonSentinelGatewayBlockExceptionHandler() {
-//        return new JsonSentinelGatewayBlockExceptionHandler(viewResolvers, serverCodecConfigurer);
-//    }
     @Bean
     @Order(-1)
     public GlobalFilter sentinelGatewayFilter() {
