@@ -9,11 +9,6 @@ import org.springframework.stereotype.Component;
 public class BeanUtil implements ApplicationContextAware {
     private static ApplicationContext context;
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        context = applicationContext;
-    }
-
     public static void set(ApplicationContext applicationContext) {
         context = applicationContext;
     }
@@ -28,6 +23,11 @@ public class BeanUtil implements ApplicationContextAware {
 
     public static <T> T getBean(String name, Class<T> beanClass) {
         return context.getBean(name, beanClass);
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        context = applicationContext;
     }
 
 }

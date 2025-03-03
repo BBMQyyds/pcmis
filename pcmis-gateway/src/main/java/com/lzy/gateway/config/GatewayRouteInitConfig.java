@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.stereotype.Component;
+
 import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Objects;
@@ -23,19 +24,15 @@ import java.util.concurrent.Executor;
 @RefreshScope
 public class GatewayRouteInitConfig {
 
+    private final ObjectMapper objectMapper = new ObjectMapper();
     @Autowired
     private GatewayRouteConfigProperties configProperties;
-
     @Autowired
     private NacosConfigProperties nacosConfigProperties;
-
     @Autowired
     private RouteService routeService;
-
     @Autowired
     private ConfigService configService;
-
-    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @PostConstruct
     public void init() {

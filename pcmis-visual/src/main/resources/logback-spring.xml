@@ -11,7 +11,9 @@
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <!-- 为不同的日志级别设置不同的颜色 -->
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level){bold,cyan} %logger{20} - [%method,%line] - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level){bold,cyan} %logger{20} - [%method,%line]
+                - %msg%n
+            </pattern>
         </encoder>
     </appender>
 

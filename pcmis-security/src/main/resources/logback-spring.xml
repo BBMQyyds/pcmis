@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- 日志存放路径 -->
-    <springProperty scope="context" name="log.path" source="app.log.home.dir" defaultValue="./logs/pcmis-security-logs"/>
+    <springProperty scope="context" name="log.path" source="app.log.home.dir"
+                    defaultValue="./logs/pcmis-security-logs"/>
     <property name="log.filePrefix" value="spring-console"/>
     <!-- 日志输出格式 -->
     <property name="log.pattern"
@@ -11,7 +12,9 @@
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <!-- 为不同的日志级别设置不同的颜色 -->
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level){bold,cyan} %logger{20} - [%method,%line] - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level){bold,cyan} %logger{20} - [%method,%line]
+                - %msg%n
+            </pattern>
         </encoder>
     </appender>
 

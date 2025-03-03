@@ -46,26 +46,26 @@ spring:
             group-id: pcmis
             namespace: pcmis
             rule-type: param-flow
-#        system-control:
-#            nacos:
-#                username: nacos
-#                password: 2003
-#                server-addr: localhost:8848
-#                data-id: gateway-sentinel-system
-#                data-type: json
-#                group-id: pcmis
-#                namespace: pcmis
-#                rule-type: system
+        #        system-control:
+        #            nacos:
+        #                username: nacos
+        #                password: 2003
+        #                server-addr: localhost:8848
+        #                data-id: gateway-sentinel-system
+        #                data-type: json
+        #                group-id: pcmis
+        #                namespace: pcmis
+        #                rule-type: system
         authority-control:
-            nacos:
-                username: nacos
-                password: 2003
-                server-addr: localhost:8848
-                data-id: gateway-sentinel-authority
-                data-type: json
-                group-id: pcmis
-                namespace: pcmis
-                rule-type: authority
+          nacos:
+            username: nacos
+            password: 2003
+            server-addr: localhost:8848
+            data-id: gateway-sentinel-authority
+            data-type: json
+            group-id: pcmis
+            namespace: pcmis
+            rule-type: authority
     nacos:
       discovery:
         server-addr: localhost:8848
@@ -90,38 +90,8 @@ logging:
   level:
     org.springframework.cloud.gateway.route.CachingRouteLocator: off
 
-
-#        - id: pcmis-case
-#          uri: lb://pcmis-case
-#          predicates:
-#            - Path=/case/**
-#
-#        - id: pcmis-file
-#          uri: lb://pcmis-file
-#          predicates:
-#            - Path=/file/**
-#
-#        - id: pcmis-project
-#          uri: lb://pcmis-project
-#          predicates:
-#            - Path=/project/**
-#
-#        - id: pcmis-risk
-#          uri: lb://pcmis-risk
-#          predicates:
-#            - Path=/risk/**
-#
-#        - id: pcmis-security
-#          uri: lb://pcmis-security
-#          predicates:
-#            - Path=/security/**
-#
-#        - id: pcmis-user
-#          uri: lb://pcmis-user
-#          predicates:
-#            - Path=/user/**
-#
-#        - id: pcmis-visual
-#          uri: lb://pcmis-visual
-#          predicates:
-#            - Path=/visual/**
+jwt:
+  tokenHeader: Authorization
+  secret: pcmis-jdsbbmq # 秘钥
+  expiration: 604800 # 7天
+  prefix: Bearer # token前缀

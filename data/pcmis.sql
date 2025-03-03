@@ -43,7 +43,7 @@ CREATE TABLE `_case` (
   KEY `handler_id` (`handler_id`),
   CONSTRAINT `_case_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`),
   CONSTRAINT `_case_ibfk_2` FOREIGN KEY (`handler_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='劳动案件表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='劳动案件表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,7 +52,7 @@ CREATE TABLE `_case` (
 
 LOCK TABLES `_case` WRITE;
 /*!40000 ALTER TABLE `_case` DISABLE KEYS */;
-INSERT INTO `_case` VALUES (1,1,'2025-03-02 03:37:47','Complainant 1',1200.00,1,'Respondent 1','工程建设','待受理',1,0.00,0,'2025-03-02 03:37:47','2025-03-02 03:37:47'),(2,2,'2025-03-02 04:37:47','Complainant 2',1300.00,2,'Respondent 2','非工程','处理中',2,1000.00,1,'2025-03-02 04:37:47','2025-03-02 04:37:47'),(3,3,'2025-03-02 05:37:47','Complainant 3',1400.00,3,'Respondent 3','工程建设','已办结',3,1500.00,2,'2025-03-02 05:37:47','2025-03-02 05:37:47'),(4,4,'2025-03-02 06:37:47','Complainant 4',1500.00,1,'Respondent 4','非工程','待受理',4,0.00,0,'2025-03-02 06:37:47','2025-03-02 06:37:47'),(5,5,'2025-03-02 07:37:47','Complainant 5',1600.00,4,'Respondent 5','工程建设','处理中',5,500.00,1,'2025-03-02 07:37:47','2025-03-02 07:37:47'),(6,6,'2025-03-02 08:37:47','Complainant 6',1700.00,5,'Respondent 6','非工程','已办结',6,2000.00,2,'2025-03-02 08:37:47','2025-03-02 08:37:47'),(7,7,'2025-03-02 09:37:47','Complainant 7',1800.00,6,'Respondent 7','工程建设','待受理',7,0.00,0,'2025-03-02 09:37:47','2025-03-02 09:37:47'),(8,8,'2025-03-02 10:37:47','Complainant 8',1900.00,7,'Respondent 8','非工程','处理中',8,1500.00,1,'2025-03-02 10:37:47','2025-03-02 10:37:47'),(9,9,'2025-03-02 11:37:47','Complainant 9',2000.00,8,'Respondent 9','工程建设','已办结',9,2500.00,2,'2025-03-02 11:37:47','2025-03-02 11:37:47'),(10,10,'2025-03-02 12:37:47','Complainant 10',2100.00,9,'Respondent 10','非工程','待受理',10,0.00,0,'2025-03-02 12:37:47','2025-03-02 12:37:47');
+INSERT INTO `_case` VALUES (1,1,'2025-03-01 10:00:00','王小明',50.00,3,'某建筑公司','工程建设','处理中',4,20.00,1,'2025-03-03 15:52:29','2025-03-03 15:52:29'),(2,2,'2025-03-02 14:30:00','李大军',80.00,5,'某施工单位','工程建设','待受理',4,0.00,0,'2025-03-03 15:52:29','2025-03-03 15:52:29');
 /*!40000 ALTER TABLE `_case` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -76,7 +76,7 @@ CREATE TABLE `attachment` (
   KEY `idx_biz` (`biz_type`,`biz_id`),
   KEY `upload_user` (`upload_user`),
   CONSTRAINT `attachment_ibfk_1` FOREIGN KEY (`upload_user`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='附件管理表';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='附件管理表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,8 +85,67 @@ CREATE TABLE `attachment` (
 
 LOCK TABLES `attachment` WRITE;
 /*!40000 ALTER TABLE `attachment` DISABLE KEYS */;
-INSERT INTO `attachment` VALUES (1,'项目合同',1,'file_1.pdf','/path/to/file/1.pdf',1200,1,'2025-03-02 03:37:47'),(2,'保证金凭证',2,'file_2.pdf','/path/to/file/2.pdf',2500,2,'2025-03-02 04:37:47'),(3,'案件证据',3,'file_3.pdf','/path/to/file/3.pdf',3500,3,'2025-03-02 05:37:47'),(4,'项目合同',4,'file_4.pdf','/path/to/file/4.pdf',4500,4,'2025-03-02 06:37:47'),(5,'保证金凭证',5,'file_5.pdf','/path/to/file/5.pdf',1500,5,'2025-03-02 07:37:47'),(6,'案件证据',6,'file_6.pdf','/path/to/file/6.pdf',500,6,'2025-03-02 08:37:47'),(7,'项目合同',7,'file_7.pdf','/path/to/file/7.pdf',1200,7,'2025-03-02 09:37:47'),(8,'保证金凭证',8,'file_8.pdf','/path/to/file/8.pdf',2000,8,'2025-03-02 10:37:47'),(9,'案件证据',9,'file_9.pdf','/path/to/file/9.pdf',2800,9,'2025-03-02 11:37:47'),(10,'项目合同',10,'file_10.pdf','/path/to/file/10.pdf',3200,10,'2025-03-02 12:37:47');
+INSERT INTO `attachment` VALUES (1,'项目合同',1,'市政道路改造合同.pdf','/uploads/contracts/project1.pdf',204800,3,'2025-03-03 15:53:23'),(2,'保证金凭证',2,'住宅小区建设保证金缴纳凭证.jpg','/uploads/deposits/project2.jpg',102400,3,'2025-03-03 15:53:23'),(3,'案件证据',1,'工资拖欠证据.png','/uploads/evidence/case1.png',512000,4,'2025-03-03 15:53:23'),(4,'案件证据',2,'工地录音证据.mp3','/uploads/evidence/case2.mp3',1048576,4,'2025-03-03 15:53:23');
 /*!40000 ALTER TABLE `attachment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `case_evidence`
+--
+
+DROP TABLE IF EXISTS `case_evidence`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `case_evidence` (
+  `evidence_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `case_id` bigint unsigned NOT NULL,
+  `evidence_type` enum('书面证据','物证','视听资料','电子数据') NOT NULL,
+  `description` text NOT NULL COMMENT '证据描述',
+  PRIMARY KEY (`evidence_id`),
+  KEY `case_id` (`case_id`),
+  CONSTRAINT `case_evidence_ibfk_1` FOREIGN KEY (`case_id`) REFERENCES `_case` (`case_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='案件证据链表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `case_evidence`
+--
+
+LOCK TABLES `case_evidence` WRITE;
+/*!40000 ALTER TABLE `case_evidence` DISABLE KEYS */;
+INSERT INTO `case_evidence` VALUES (1,1,'书面证据','合同副本及工资支付记录'),(2,2,'视听资料','现场录音证据');
+/*!40000 ALTER TABLE `case_evidence` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `case_followup`
+--
+
+DROP TABLE IF EXISTS `case_followup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `case_followup` (
+  `follow_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `case_id` bigint unsigned NOT NULL,
+  `visit_time` datetime NOT NULL COMMENT '回访时间',
+  `visit_result` text NOT NULL COMMENT '回访结果',
+  `visitor_id` bigint unsigned NOT NULL COMMENT '回访人',
+  PRIMARY KEY (`follow_id`),
+  KEY `case_id` (`case_id`),
+  KEY `visitor_id` (`visitor_id`),
+  CONSTRAINT `case_followup_ibfk_1` FOREIGN KEY (`case_id`) REFERENCES `_case` (`case_id`),
+  CONSTRAINT `case_followup_ibfk_2` FOREIGN KEY (`visitor_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='案件回访记录表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `case_followup`
+--
+
+LOCK TABLES `case_followup` WRITE;
+/*!40000 ALTER TABLE `case_followup` DISABLE KEYS */;
+INSERT INTO `case_followup` VALUES (1,1,'2025-03-05 09:30:00','投诉人表示已收到部分款项',4),(2,2,'2025-03-06 10:00:00','案件正在处理中',4);
+/*!40000 ALTER TABLE `case_followup` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -108,7 +167,7 @@ CREATE TABLE `case_process` (
   KEY `handler_id` (`handler_id`),
   CONSTRAINT `case_process_ibfk_1` FOREIGN KEY (`case_id`) REFERENCES `_case` (`case_id`),
   CONSTRAINT `case_process_ibfk_2` FOREIGN KEY (`handler_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='案件处理流程表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='案件处理流程表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -117,7 +176,7 @@ CREATE TABLE `case_process` (
 
 LOCK TABLES `case_process` WRITE;
 /*!40000 ALTER TABLE `case_process` DISABLE KEYS */;
-INSERT INTO `case_process` VALUES (1,1,'行政意见','处理意见内容 1',8,'2025-03-02 02:37:47'),(2,5,'接待意见','处理意见内容 2',4,'2025-03-02 02:37:47'),(3,2,'监察意见','处理意见内容 3',3,'2025-03-02 02:37:47'),(4,9,'接待意见','处理意见内容 4',8,'2025-03-02 02:37:47'),(5,9,'行政意见','处理意见内容 5',6,'2025-03-02 02:37:47'),(6,6,'接待意见','处理意见内容 6',3,'2025-03-02 02:37:47'),(7,7,'监察意见','处理意见内容 7',2,'2025-03-02 02:37:47'),(8,8,'接待意见','处理意见内容 8',4,'2025-03-02 02:37:47'),(9,10,'行政意见','处理意见内容 9',9,'2025-03-02 02:37:47'),(10,3,'接待意见','处理意见内容 10',5,'2025-03-02 02:37:47');
+INSERT INTO `case_process` VALUES (1,1,'接待意见','案件已受理，等待进一步调查',4,'2025-03-03 15:52:29'),(2,2,'监察意见','已调查相关证据，建议调解',4,'2025-03-03 15:52:29');
 /*!40000 ALTER TABLE `case_process` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +208,7 @@ CREATE TABLE `project` (
   KEY `idx_project_name` (`project_name`),
   KEY `create_by` (`create_by`),
   CONSTRAINT `project_ibfk_1` FOREIGN KEY (`create_by`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='工程项目表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='工程项目表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,8 +217,101 @@ CREATE TABLE `project` (
 
 LOCK TABLES `project` WRITE;
 /*!40000 ALTER TABLE `project` DISABLE KEYS */;
-INSERT INTO `project` VALUES (1,'Project 1','Construction Unit 1','Contractor 1',150.50,'Location 1','2025-03-02','2025-03-02','在建',20.00,'未缴纳','存款',1,1,'2025-03-02 03:37:47','2025-03-02 03:37:47'),(2,'Project 2','Construction Unit 2','Contractor 2',200.00,'Location 2','2025-03-02','2025-03-02','停工',30.00,'已缴纳','保单',1,2,'2025-03-02 04:37:47','2025-03-02 04:37:47'),(3,'Project 3','Construction Unit 3','Contractor 3',250.00,'Location 3','2025-03-02','2025-03-02','完工',40.00,'部分缴纳','保函',0,3,'2025-03-02 05:37:47','2025-03-02 05:37:47'),(4,'Project 4','Construction Unit 4','Contractor 4',300.00,'Location 4','2025-03-02','2025-03-02','在建',50.00,'未缴纳','存款',0,4,'2025-03-02 06:37:47','2025-03-02 06:37:47'),(5,'Project 5','Construction Unit 5','Contractor 5',350.00,'Location 5','2025-03-02','2025-03-02','停工',60.00,'已缴纳','保单',1,5,'2025-03-02 07:37:47','2025-03-02 07:37:47'),(6,'Project 6','Construction Unit 6','Contractor 6',400.00,'Location 6','2025-03-02','2025-03-02','完工',70.00,'部分缴纳','保函',1,6,'2025-03-02 08:37:47','2025-03-02 08:37:47'),(7,'Project 7','Construction Unit 7','Contractor 7',450.00,'Location 7','2025-03-02','2025-03-02','在建',80.00,'未缴纳','存款',0,7,'2025-03-02 09:37:47','2025-03-02 09:37:47'),(8,'Project 8','Construction Unit 8','Contractor 8',500.00,'Location 8','2025-03-02','2025-03-02','停工',90.00,'已缴纳','保单',0,8,'2025-03-02 10:37:47','2025-03-02 10:37:47'),(9,'Project 9','Construction Unit 9','Contractor 9',550.00,'Location 9','2025-03-02','2025-03-02','完工',100.00,'部分缴纳','保函',1,9,'2025-03-02 11:37:47','2025-03-02 11:37:47'),(10,'Project 10','Construction Unit 10','Contractor 10',600.00,'Location 10','2025-03-02','2025-03-02','在建',110.00,'未缴纳','存款',0,10,'2025-03-02 12:37:47','2025-03-02 12:37:47');
+INSERT INTO `project` VALUES (1,'市政道路改造工程','某市政建设局','某建筑公司',5000.00,'北京市朝阳区','2025-01-15','2025-02-01','在建',200.00,'已缴纳','保函',1,3,'2025-03-03 15:52:29','2025-03-03 15:52:29'),(2,'住宅小区建设项目','某房地产公司','某施工单位',8000.00,'上海市浦东新区','2025-02-10','2025-03-01','在建',300.00,'部分缴纳','存款',1,3,'2025-03-03 15:52:29','2025-03-03 15:52:29');
 /*!40000 ALTER TABLE `project` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `project_company`
+--
+
+DROP TABLE IF EXISTS `project_company`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `project_company` (
+  `relation_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `project_id` bigint unsigned NOT NULL,
+  `company_type` enum('建设单位','总承包','分包单位','监理单位') NOT NULL,
+  `company_name` varchar(200) NOT NULL,
+  `contact_person` varchar(50) DEFAULT NULL,
+  `contact_phone` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`relation_id`),
+  KEY `project_id` (`project_id`),
+  CONSTRAINT `project_company_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='项目参与单位表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `project_company`
+--
+
+LOCK TABLES `project_company` WRITE;
+/*!40000 ALTER TABLE `project_company` DISABLE KEYS */;
+INSERT INTO `project_company` VALUES (1,1,'建设单位','某市政建设局','张建设','13888880001'),(2,1,'总承包','某建筑公司','李施工','13999990002'),(3,1,'监理单位','某工程监理公司','王监理','13777770003'),(4,2,'建设单位','某房地产公司','赵房建','13666660004'),(5,2,'总承包','某施工单位','钱工程','13555550005');
+/*!40000 ALTER TABLE `project_company` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `project_phase`
+--
+
+DROP TABLE IF EXISTS `project_phase`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `project_phase` (
+  `phase_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `project_id` bigint unsigned NOT NULL,
+  `phase_type` enum('立项','施工','竣工','验收') NOT NULL COMMENT '阶段类型',
+  `start_date` date NOT NULL,
+  `end_date` date DEFAULT NULL,
+  `phase_status` enum('未开始','进行中','已完成') DEFAULT '未开始',
+  PRIMARY KEY (`phase_id`),
+  KEY `project_id` (`project_id`),
+  CONSTRAINT `project_phase_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='项目阶段表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `project_phase`
+--
+
+LOCK TABLES `project_phase` WRITE;
+/*!40000 ALTER TABLE `project_phase` DISABLE KEYS */;
+INSERT INTO `project_phase` VALUES (1,1,'立项','2025-01-01','2025-01-10','已完成'),(2,1,'施工','2025-02-01',NULL,'进行中'),(3,2,'立项','2025-02-15','2025-02-20','已完成'),(4,2,'施工','2025-03-01',NULL,'进行中');
+/*!40000 ALTER TABLE `project_phase` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `risk_assessment`
+--
+
+DROP TABLE IF EXISTS `risk_assessment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `risk_assessment` (
+  `assessment_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `project_id` bigint unsigned NOT NULL,
+  `risk_level` enum('低风险','中风险','高风险') NOT NULL,
+  `assessment_date` date NOT NULL,
+  `assessment_by` bigint unsigned NOT NULL COMMENT '评估人',
+  `risk_factors` text NOT NULL COMMENT '风险因素',
+  `preventive_measures` text COMMENT '预防措施',
+  PRIMARY KEY (`assessment_id`),
+  KEY `project_id` (`project_id`),
+  KEY `assessment_by` (`assessment_by`),
+  CONSTRAINT `risk_assessment_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`),
+  CONSTRAINT `risk_assessment_ibfk_2` FOREIGN KEY (`assessment_by`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='风险评估记录表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `risk_assessment`
+--
+
+LOCK TABLES `risk_assessment` WRITE;
+/*!40000 ALTER TABLE `risk_assessment` DISABLE KEYS */;
+INSERT INTO `risk_assessment` VALUES (1,1,'中风险','2025-03-01',3,'项目进度缓慢，存在工期延误风险','增加施工人员，加快施工进度'),(2,2,'高风险','2025-03-02',3,'发现施工质量存在问题，可能导致安全事故','加强质量检查，确保施工规范执行');
+/*!40000 ALTER TABLE `risk_assessment` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -178,7 +330,7 @@ CREATE TABLE `sms_code` (
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `idx_mobile` (`mobile`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='短信验证码表';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='短信验证码表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,8 +339,207 @@ CREATE TABLE `sms_code` (
 
 LOCK TABLES `sms_code` WRITE;
 /*!40000 ALTER TABLE `sms_code` DISABLE KEYS */;
-INSERT INTO `sms_code` VALUES (1,'13812345678','5234','login','2025-03-02 03:37:47','2025-03-02 03:37:47'),(2,'13823456789','6345','register','2025-03-02 04:37:47','2025-03-02 04:37:47'),(3,'13834567890','7456','login','2025-03-02 05:37:47','2025-03-02 05:37:47'),(4,'13845678901','8567','register','2025-03-02 06:37:47','2025-03-02 06:37:47'),(5,'13856789012','9678','login','2025-03-02 07:37:47','2025-03-02 07:37:47'),(6,'13867890123','0789','reset_password','2025-03-02 08:37:47','2025-03-02 08:37:47'),(7,'13878901234','1890','register','2025-03-02 09:37:47','2025-03-02 09:37:47'),(8,'13889012345','2901','login','2025-03-02 10:37:47','2025-03-02 10:37:47'),(9,'13890123456','3012','register','2025-03-02 11:37:47','2025-03-02 11:37:47'),(10,'13801234567','4123','login','2025-03-02 12:37:47','2025-03-02 12:37:47');
+INSERT INTO `sms_code` VALUES (1,'13812345678','563482','login','2025-03-04 10:30:00','2025-03-03 15:52:29'),(2,'13987654321','834927','register','2025-03-04 10:40:00','2025-03-03 15:52:29'),(3,'13765439876','927614','password_reset','2025-03-04 11:00:00','2025-03-03 15:52:29'),(4,'13654329876','618294','login','2025-03-04 11:15:00','2025-03-03 15:52:29'),(5,'13543218765','492738','register','2025-03-04 12:00:00','2025-03-03 15:52:29');
 /*!40000 ALTER TABLE `sms_code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `stat_report`
+--
+
+DROP TABLE IF EXISTS `stat_report`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `stat_report` (
+  `report_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `report_type` enum('项目统计','案件统计','工资发放统计') NOT NULL,
+  `report_period` enum('日报','周报','月报','年报') NOT NULL,
+  `report_data` json NOT NULL COMMENT '统计结果数据',
+  `generate_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `generated_by` bigint unsigned NOT NULL,
+  PRIMARY KEY (`report_id`),
+  KEY `generated_by` (`generated_by`),
+  CONSTRAINT `stat_report_ibfk_1` FOREIGN KEY (`generated_by`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='统计报表存储表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `stat_report`
+--
+
+LOCK TABLES `stat_report` WRITE;
+/*!40000 ALTER TABLE `stat_report` DISABLE KEYS */;
+INSERT INTO `stat_report` VALUES (1,'项目统计','月报','{\"ongoing\": 2, \"completed\": 0, \"total_projects\": 2}','2025-03-03 15:52:30',1),(2,'案件统计','周报','{\"pending\": 1, \"resolved\": 1, \"total_cases\": 2}','2025-03-03 15:52:30',1);
+/*!40000 ALTER TABLE `stat_report` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_dict`
+--
+
+DROP TABLE IF EXISTS `sys_dict`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sys_dict` (
+  `dict_id` int NOT NULL AUTO_INCREMENT,
+  `dict_type` varchar(50) NOT NULL COMMENT '字典类型',
+  `dict_code` varchar(50) NOT NULL COMMENT '字典编码',
+  `dict_value` varchar(100) NOT NULL COMMENT '字典值',
+  `sort_order` int DEFAULT '0' COMMENT '排序号',
+  PRIMARY KEY (`dict_id`),
+  UNIQUE KEY `uniq_type_code` (`dict_type`,`dict_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='数据字典表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_dict`
+--
+
+LOCK TABLES `sys_dict` WRITE;
+/*!40000 ALTER TABLE `sys_dict` DISABLE KEYS */;
+INSERT INTO `sys_dict` VALUES (1,'role','admin','管理员',1),(2,'role','user','普通用户',2),(3,'case_status','pending','待受理',1),(4,'case_status','processing','处理中',2),(5,'case_status','completed','已办结',3);
+/*!40000 ALTER TABLE `sys_dict` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_log`
+--
+
+DROP TABLE IF EXISTS `sys_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sys_log` (
+  `log_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint unsigned NOT NULL,
+  `module` varchar(50) NOT NULL COMMENT '操作模块',
+  `operation_type` enum('新增','修改','删除','查询','导入','导出') NOT NULL,
+  `operation_desc` varchar(500) DEFAULT NULL COMMENT '操作描述',
+  `ip_address` varchar(50) DEFAULT NULL COMMENT '操作IP',
+  `operation_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`log_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `sys_log_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='系统操作日志表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_log`
+--
+
+LOCK TABLES `sys_log` WRITE;
+/*!40000 ALTER TABLE `sys_log` DISABLE KEYS */;
+INSERT INTO `sys_log` VALUES (1,1,'用户管理','新增','添加新用户 user1','192.168.1.1','2025-03-03 15:52:30'),(2,3,'项目管理','修改','更新项目合同金额','192.168.1.2','2025-03-03 15:52:30');
+/*!40000 ALTER TABLE `sys_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_notice`
+--
+
+DROP TABLE IF EXISTS `sys_notice`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sys_notice` (
+  `notice_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  `publisher_id` bigint unsigned NOT NULL,
+  `publish_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `expire_time` datetime DEFAULT NULL COMMENT '过期时间',
+  PRIMARY KEY (`notice_id`),
+  KEY `publisher_id` (`publisher_id`),
+  CONSTRAINT `sys_notice_ibfk_1` FOREIGN KEY (`publisher_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='系统通知公告表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_notice`
+--
+
+LOCK TABLES `sys_notice` WRITE;
+/*!40000 ALTER TABLE `sys_notice` DISABLE KEYS */;
+INSERT INTO `sys_notice` VALUES (1,'系统维护公告','系统将于2025-03-10 00:00进行维护',1,'2025-03-03 15:52:30',NULL),(2,'工资发放通知','三月份工资已发放，请查收',3,'2025-03-03 15:52:30',NULL);
+/*!40000 ALTER TABLE `sys_notice` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_permission`
+--
+
+DROP TABLE IF EXISTS `sys_permission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sys_permission` (
+  `perm_id` int NOT NULL AUTO_INCREMENT COMMENT '权限ID',
+  `perm_name` varchar(50) NOT NULL COMMENT '权限名称',
+  `perm_key` varchar(100) NOT NULL COMMENT '权限标识（如system:user:list）',
+  `menu_icon` varchar(50) DEFAULT NULL COMMENT '菜单图标',
+  `component` varchar(200) DEFAULT NULL COMMENT '前端组件路径',
+  PRIMARY KEY (`perm_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='权限表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_permission`
+--
+
+LOCK TABLES `sys_permission` WRITE;
+/*!40000 ALTER TABLE `sys_permission` DISABLE KEYS */;
+INSERT INTO `sys_permission` VALUES (1,'用户管理','system:user:list','user','/user/list'),(2,'角色管理','system:role:list','role','/role/list'),(3,'项目管理','project:manage','project','/project/list'),(4,'案件管理','case:manage','case','/case/list'),(5,'工资发放','wage:payment','money','/wage/payment');
+/*!40000 ALTER TABLE `sys_permission` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_role`
+--
+
+DROP TABLE IF EXISTS `sys_role`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sys_role` (
+  `role_id` int NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `role_name` varchar(50) NOT NULL COMMENT '角色名称',
+  `role_key` varchar(50) NOT NULL COMMENT '角色标识',
+  `description` varchar(200) DEFAULT NULL COMMENT '描述',
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='角色表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_role`
+--
+
+LOCK TABLES `sys_role` WRITE;
+/*!40000 ALTER TABLE `sys_role` DISABLE KEYS */;
+INSERT INTO `sys_role` VALUES (1,'管理员','admin','系统管理员，具有所有权限'),(2,'普通用户','user','普通用户，具有基本访问权限'),(3,'项目经理','project_manager','负责项目的管理和审批'),(4,'案件管理员','case_manager','负责案件的受理和处理');
+/*!40000 ALTER TABLE `sys_role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sys_role_perm`
+--
+
+DROP TABLE IF EXISTS `sys_role_perm`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sys_role_perm` (
+  `role_id` int NOT NULL,
+  `perm_id` int NOT NULL,
+  PRIMARY KEY (`role_id`,`perm_id`),
+  KEY `perm_id` (`perm_id`),
+  CONSTRAINT `sys_role_perm_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `sys_role` (`role_id`),
+  CONSTRAINT `sys_role_perm_ibfk_2` FOREIGN KEY (`perm_id`) REFERENCES `sys_permission` (`perm_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='角色权限关联表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_role_perm`
+--
+
+LOCK TABLES `sys_role_perm` WRITE;
+/*!40000 ALTER TABLE `sys_role_perm` DISABLE KEYS */;
+INSERT INTO `sys_role_perm` VALUES (1,1),(1,2),(1,3),(3,3),(1,4),(4,4),(1,5),(3,5);
+/*!40000 ALTER TABLE `sys_role_perm` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -203,14 +554,17 @@ CREATE TABLE `user` (
   `username` varchar(50) NOT NULL COMMENT '用户名',
   `password` varchar(100) NOT NULL COMMENT '加密密码',
   `mobile` varchar(20) NOT NULL COMMENT '手机号',
+  `email` varchar(100) DEFAULT NULL COMMENT '电子邮箱',
   `real_name` varchar(50) DEFAULT NULL COMMENT '真实姓名',
   `role_id` int NOT NULL DEFAULT '2' COMMENT '角色ID（1-管理员 2-普通用户）',
+  `department` varchar(100) DEFAULT NULL COMMENT '所属部门',
+  `position` varchar(50) DEFAULT NULL COMMENT '职位',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `uniq_username` (`username`),
   KEY `idx_mobile` (`mobile`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='系统用户表';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='系统用户表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -219,8 +573,42 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'user1','password_1234','13812345678','Real Name 1',1,'2025-03-02 03:37:47','2025-03-02 03:37:47'),(2,'user2','password_5678','13823456789','Real Name 2',2,'2025-03-02 04:37:47','2025-03-02 04:37:47'),(3,'user3','password_9101','13834567890','Real Name 3',2,'2025-03-02 05:37:47','2025-03-02 05:37:47'),(4,'user4','password_1121','13845678901','Real Name 4',1,'2025-03-02 06:37:47','2025-03-02 06:37:47'),(5,'user5','password_3141','13856789012','Real Name 5',2,'2025-03-02 07:37:47','2025-03-02 07:37:47'),(6,'user6','password_5161','13867890123','Real Name 6',1,'2025-03-02 08:37:47','2025-03-02 08:37:47'),(7,'user7','password_7181','13878901234','Real Name 7',2,'2025-03-02 09:37:47','2025-03-02 09:37:47'),(8,'user8','password_9202','13889012345','Real Name 8',1,'2025-03-02 10:37:47','2025-03-02 10:37:47'),(9,'user9','password_1223','13890123456','Real Name 9',2,'2025-03-02 11:37:47','2025-03-02 11:37:47'),(10,'user10','password_3244','13801234567','Real Name 10',1,'2025-03-02 12:37:47','2025-03-02 12:37:47');
+INSERT INTO `user` VALUES (1,'admin','hashed_password','13800001111','admin@example.com','张伟',1,'系统管理','系统管理员','2025-03-03 15:52:29','2025-03-03 15:52:29'),(2,'user1','hashed_password','13900002222','user1@example.com','李娜',2,'工程部','普通用户','2025-03-03 15:52:29','2025-03-03 15:52:29'),(3,'pm1','hashed_password','13700003333','pm1@example.com','王强',3,'工程部','项目经理','2025-03-03 15:52:29','2025-03-03 15:52:29'),(4,'case_mgr','hashed_password','13600004444','case_mgr@example.com','赵敏',4,'法务部','案件管理员','2025-03-03 15:52:29','2025-03-03 15:52:29');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wage_payment`
+--
+
+DROP TABLE IF EXISTS `wage_payment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `wage_payment` (
+  `payment_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `project_id` bigint unsigned NOT NULL,
+  `worker_name` varchar(100) NOT NULL COMMENT '工人姓名',
+  `id_card` varchar(20) NOT NULL COMMENT '身份证号',
+  `payment_amount` decimal(15,2) NOT NULL COMMENT '发放金额',
+  `payment_date` date NOT NULL COMMENT '发放日期',
+  `payment_method` enum('银行转账','现金','其他') DEFAULT '银行转账',
+  `payment_proof` bigint unsigned DEFAULT NULL COMMENT '支付凭证附件',
+  PRIMARY KEY (`payment_id`),
+  KEY `project_id` (`project_id`),
+  KEY `payment_proof` (`payment_proof`),
+  CONSTRAINT `wage_payment_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`),
+  CONSTRAINT `wage_payment_ibfk_2` FOREIGN KEY (`payment_proof`) REFERENCES `attachment` (`file_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='工资发放记录表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wage_payment`
+--
+
+LOCK TABLES `wage_payment` WRITE;
+/*!40000 ALTER TABLE `wage_payment` DISABLE KEYS */;
+INSERT INTO `wage_payment` VALUES (1,1,'赵四','110101199001011234',5000.00,'2025-03-01','银行转账',NULL),(2,2,'钱六','310101198802021234',4500.00,'2025-03-02','现金',NULL);
+/*!40000 ALTER TABLE `wage_payment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -232,4 +620,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-02 13:28:19
+-- Dump completed on 2025-03-03 15:54:58

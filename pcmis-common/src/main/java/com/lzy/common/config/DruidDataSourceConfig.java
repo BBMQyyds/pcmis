@@ -10,6 +10,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.List;
@@ -21,17 +22,17 @@ public class DruidDataSourceConfig {
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     @ConditionalOnProperty(name = "spring.datasource.type", havingValue = "com.alibaba.druid.pool.DruidDataSource")
-    public DataSource druid(){
+    public DataSource druid() {
         return new DruidDataSource();
     }
 
     @Bean
     @ConditionalOnClass(DruidDataSource.class)
-    public ServletRegistrationBean statViewServlet(){
-        Map<String,String> initParams = new HashMap<>();
-        initParams.put("loginUsername","admin");
-        initParams.put("loginPassword","2003");
-        initParams.put("allow","");
+    public ServletRegistrationBean statViewServlet() {
+        Map<String, String> initParams = new HashMap<>();
+        initParams.put("loginUsername", "admin");
+        initParams.put("loginPassword", "2003");
+        initParams.put("allow", "");
         ServletRegistrationBean bean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
         bean.setInitParameters(initParams);
         return bean;
@@ -42,15 +43,15 @@ public class DruidDataSourceConfig {
      */
     @Bean
     @ConditionalOnClass(DruidDataSource.class)
-    public FilterRegistrationBean webStatFilter(){
-        Map<String,String> initParams = new HashMap<>();
+    public FilterRegistrationBean webStatFilter() {
+        Map<String, String> initParams = new HashMap<>();
         // 这些不进行统计
-        initParams.put("exclusions","*.js,*.css,/druid/*");
+        initParams.put("exclusions", "*.js,*.css,/druid/*");
 
         FilterRegistrationBean bean = new FilterRegistrationBean();
         bean.setFilter(new WebStatFilter());
         bean.setInitParameters(initParams);
         bean.setUrlPatterns(List.of("/*"));
-        return  bean;
+        return bean;
     }
 }

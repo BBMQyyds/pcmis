@@ -21,22 +21,20 @@ import org.springframework.core.annotation.Order;
 import org.springframework.http.codec.ServerCodecConfigurer;
 import org.springframework.web.reactive.result.view.ViewResolver;
 
+import javax.annotation.PostConstruct;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.PostConstruct;
-
 
 @Configuration
 public class SentinelGatewayConfiguration {
 
-    @Autowired
-    private InetUtils inetUtils;
-
     private final List<ViewResolver> viewResolvers;
     private final ServerCodecConfigurer serverCodecConfigurer;
+    @Autowired
+    private InetUtils inetUtils;
 
     public SentinelGatewayConfiguration(ObjectProvider<List<ViewResolver>> viewResolversProvider,
                                         ServerCodecConfigurer serverCodecConfigurer) {

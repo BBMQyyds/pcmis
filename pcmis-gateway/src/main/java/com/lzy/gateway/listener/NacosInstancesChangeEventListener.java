@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public  class NacosInstancesChangeEventListener extends Subscriber<InstancesChangeEvent> {
+public class NacosInstancesChangeEventListener extends Subscriber<InstancesChangeEvent> {
 
     @Override
     public void onEvent(InstancesChangeEvent event) {

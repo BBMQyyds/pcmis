@@ -1,0 +1,74 @@
+2025-03-02 13:27:57.698 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-project.yaml', group: 'pcmis', data: pcmis-project:
+  test:
+    admin: jdsbbmq-new-project
+spring:
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-project-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-02 13:27:58.193 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-02 13:27:59.788 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-02 13:27:59.796 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-02 13:27:59.797 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-02 13:27:59.797 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-02 13:27:59.798 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-02 13:27:59.798 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-02 13:27:59.798 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-02 13:28:00.004 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.insert
+2025-03-02 13:28:00.012 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.delete
+2025-03-02 13:28:00.020 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.deleteByMap
+2025-03-02 13:28:00.059 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.deleteById
+2025-03-02 13:28:00.062 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.deleteBatchIds
+2025-03-02 13:28:00.068 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.update
+2025-03-02 13:28:00.072 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.updateById
+2025-03-02 13:28:00.074 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectById
+2025-03-02 13:28:00.077 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectBatchIds
+2025-03-02 13:28:00.079 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectByMap
+2025-03-02 13:28:00.083 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectOne
+2025-03-02 13:28:00.088 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectCount
+2025-03-02 13:28:00.091 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectMaps
+2025-03-02 13:28:00.093 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectMapsPage
+2025-03-02 13:28:00.097 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectObjs
+2025-03-02 13:28:00.101 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectList
+2025-03-02 13:28:00.104 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.project.dao.ProjectMapper.selectPage
+2025-03-02 13:28:00.397 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.p.c.HelloWorldController:
+	{GET [/project1/getUserConfigTest]}: getUserConfigTest()
+2025-03-02 13:28:00.400 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-02 13:28:00.421 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-02 13:28:00.437 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-02 13:28:01.080 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-02 13:28:01.081 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-02 13:28:01.081 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-02 13:28:02.853 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@615316d9 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@647ff23e
+2025-03-02 14:13:15.163 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3409db8a will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@647ff23e
