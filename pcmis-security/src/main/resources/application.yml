@@ -1,17 +1,46 @@
 server:
   port: 9050
+  tomcat:
+    max-connections: 2048
+    accept-count: 256
+    threads:
+      max: 64
+      min-spare: 32
+  compression:
+    enabled: true
 
 spring:
   application:
     name: pcmis-security
+  cache:
+    cache-names: user,case,project,risk,security,visual,file
+    redis:
+      cache-null-values: true
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
         namespace: pcmis
         group: pcmis
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
 
 feign:
   sentinel:
     enabled: true
 
+async:
+  executor:
+    thread:
+      core_pool_size: 4
+      max_pool_size: 8
+      queue_capacity: 200
+      name_prefix: normal-pool-
+
+# minio
+s3:
+  url: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
