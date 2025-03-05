@@ -14,4 +14,3 @@ spring:
 feign:
   sentinel:
     enabled: true
-

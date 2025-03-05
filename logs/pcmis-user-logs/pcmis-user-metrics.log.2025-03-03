@@ -1,6 +1,0 @@
-1740964199000|2025-03-03 09:09:59|/testUser/openfeignTest|1|0|0|0|0|0|0|1
-1740964199000|2025-03-03 09:09:59|GET:http://pcmis-case/testCase/openfeignTest|1|0|0|0|0|0|0|0
-1740964199000|2025-03-03 09:09:59|__total_inbound_traffic__|1|0|0|0|0|0|0|0
-1740964200000|2025-03-03 09:10:00|/testUser/openfeignTest|0|0|1|0|421|0|0|1
-1740964200000|2025-03-03 09:10:00|GET:http://pcmis-case/testCase/openfeignTest|0|0|1|0|368|0|0|0
-1740964200000|2025-03-03 09:10:00|__total_inbound_traffic__|0|0|1|0|421|0|0|0

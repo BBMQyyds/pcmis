@@ -19,4 +19,10 @@ public class UserTestOpenfeignServiceImpl implements UserTestOpenfeignService {
         log.debug("openfeignTest data:{}", data);
         return testUserCaseOpenfeign.openfeignTest(data);
     }
+
+    @Override
+    public String seataTest(String data) {
+        log.debug("seataTest data:{}", data);
+        return testUserCaseOpenfeign.seataTest(data);
+    }
 }

@@ -1,0 +1,139 @@
+20:13:11,853 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+20:13:11,853 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+20:13:11,853 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/study/seata-server-1.4.2/seata/seata-server-1.4.2/conf/logback.xml]
+20:13:11,854 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+20:13:11,854 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/C:/study/seata-server-1.4.2/seata/seata-server-1.4.2/lib/seata-server-1.4.2.jar!/logback.xml]
+20:13:11,854 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/C:/study/seata-server-1.4.2/seata/seata-server-1.4.2/conf/logback.xml]
+20:13:11,940 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+20:13:11,946 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Will scan for changes in [file:/C:/study/seata-server-1.4.2/seata/seata-server-1.4.2/conf/logback.xml]
+20:13:11,946 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Setting ReconfigureOnChangeTask scanning period to 1 minutes
+20:13:11,948 |-INFO in ch.qos.logback.classic.joran.action.LoggerContextListenerAction - Adding LoggerContextListener of type [io.seata.server.logging.listener.SystemPropertyLoggerContextListener] to the object stack
+20:13:11,948 |-INFO in ch.qos.logback.classic.joran.action.LoggerContextListenerAction - Starting LoggerContextListener
+20:13:11,948 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word clr with class [io.seata.server.logging.logback.ColorConverter]
+20:13:11,948 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wex with class [io.seata.server.logging.logback.WhitespaceThrowableProxyConverter]
+20:13:11,948 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wEx with class [io.seata.server.logging.logback.ExtendedWhitespaceThrowableProxyConverter]
+20:13:11,950 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@4e1d422d - Adding [file:/C:/study/seata-server-1.4.2/seata/seata-server-1.4.2/conf/logback/console-appender.xml] to configuration watch list.
+20:13:11,953 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+20:13:11,957 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
+20:13:11,962 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:13:12,048 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@4e1d422d - Adding [file:/C:/study/seata-server-1.4.2/seata/seata-server-1.4.2/conf/logback/file-appender.xml] to configuration watch list.
+20:13:12,051 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:13:12,054 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE_ALL]
+20:13:12,063 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1715998167 - Archive files will be limited to [2048 MB] each.
+20:13:12,066 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1715998167 - Will use gz compression
+20:13:12,067 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1715998167 - Will use the pattern C:/Users/33698/logs/seata/history/seata-server.8091.all.%d{yyyy-MM-dd}.%i.log for the active file
+20:13:12,070 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@52a86356 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/Users/33698/logs/seata/history/seata-server.8091.all.%d{yyyy-MM-dd}.%i.log.gz'.
+20:13:12,070 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@52a86356 - Roll-over at midnight.
+20:13:12,074 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@52a86356 - Setting initial period to Tue Mar 04 20:13:03 CST 2025
+20:13:12,075 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1715998167 - Cleaning on start up
+20:13:12,076 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - first clean up after appender initialization
+20:13:12,076 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - Multiple periods, i.e. 32 periods, seem to have elapsed. This is expected at application start.
+20:13:12,076 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:13:12,078 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_ALL] - Active log file name: C:\Users\33698/logs/seata/seata-server.8091.all.log
+20:13:12,078 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_ALL] - File property is set to [C:\Users\33698/logs/seata/seata-server.8091.all.log]
+20:13:12,080 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:13:12,080 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE_WARN]
+20:13:12,082 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1558712965 - Archive files will be limited to [2048 MB] each.
+20:13:12,083 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1558712965 - Will use gz compression
+20:13:12,083 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1558712965 - Will use the pattern C:/Users/33698/logs/seata/history/seata-server.8091.warn.%d{yyyy-MM-dd}.%i.log for the active file
+20:13:12,083 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@78c03f1f - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/Users/33698/logs/seata/history/seata-server.8091.warn.%d{yyyy-MM-dd}.%i.log.gz'.
+20:13:12,083 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@78c03f1f - Roll-over at midnight.
+20:13:12,084 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - Removed  0 Bytes of files
+20:13:12,084 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@78c03f1f - Setting initial period to Tue Mar 04 20:13:03 CST 2025
+20:13:12,084 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1558712965 - Cleaning on start up
+20:13:12,084 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - first clean up after appender initialization
+20:13:12,085 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - Multiple periods, i.e. 32 periods, seem to have elapsed. This is expected at application start.
+20:13:12,085 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:13:12,086 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_WARN] - Active log file name: C:\Users\33698/logs/seata/seata-server.8091.warn.log
+20:13:12,086 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_WARN] - File property is set to [C:\Users\33698/logs/seata/seata-server.8091.warn.log]
+20:13:12,086 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:13:12,087 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE_ERROR]
+20:13:12,089 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1589683045 - Archive files will be limited to [2048 MB] each.
+20:13:12,089 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1589683045 - Will use gz compression
+20:13:12,089 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1589683045 - Will use the pattern C:/Users/33698/logs/seata/history/seata-server.8091.error.%d{yyyy-MM-dd}.%i.log for the active file
+20:13:12,089 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4fe3c938 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/Users/33698/logs/seata/history/seata-server.8091.error.%d{yyyy-MM-dd}.%i.log.gz'.
+20:13:12,089 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4fe3c938 - Roll-over at midnight.
+20:13:12,090 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4fe3c938 - Setting initial period to Tue Mar 04 20:13:03 CST 2025
+20:13:12,090 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1589683045 - Cleaning on start up
+20:13:12,090 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - first clean up after appender initialization
+20:13:12,090 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - Multiple periods, i.e. 32 periods, seem to have elapsed. This is expected at application start.
+20:13:12,091 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:13:12,092 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_ERROR] - Active log file name: C:\Users\33698/logs/seata/seata-server.8091.error.log
+20:13:12,092 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_ERROR] - File property is set to [C:\Users\33698/logs/seata/seata-server.8091.error.log]
+20:13:12,093 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+20:13:12,093 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
+20:13:12,093 |-INFO in c.q.l.core.rolling.helper.TimeBasedArchiveRemover - Removed  0 Bytes of files
+20:13:12,094 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE_ALL] to Logger[ROOT]
+20:13:12,094 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE_WARN] to Logger[ROOT]
+20:13:12,094 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE_ERROR] to Logger[ROOT]
+20:13:12,094 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+20:13:12,094 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@5383967b - Registering current configuration as safe fallback point
+
+SLF4J: A number (18) of logging calls during the initialization phase have been intercepted and are
+SLF4J: now being replayed. These are subject to the filtering rules of the underlying logging system.
+SLF4J: See also http://www.slf4j.org/codes.html#replay
+20:13:12.194  INFO --- [                     main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+20:13:12.209  INFO --- [                     main] io.seata.config.FileConfiguration        : The configuration file used is C:\study\seata-server-1.4.2\seata\seata-server-1.4.2\conf\registry.conf
+20:13:14.845 ERROR --- [                     main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} init error
+==>
+java.sql.SQLException: com/mysql//cj/jdbc/Driver
+        at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:653) ~[druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.resolveDriver(DruidDataSource.java:1201) [druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:876) [druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1378) [druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1374) [druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98) [druid-1.1.23.jar:1.1.23]
+        at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryTableStructure(LogStoreDataBaseDAO.java:461) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.LogStoreDataBaseDAO.initTransactionNameSize(LogStoreDataBaseDAO.java:445) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.LogStoreDataBaseDAO.<init>(LogStoreDataBaseDAO.java:106) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.<init>(DataBaseTransactionStoreManager.java:96) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.getInstance(DataBaseTransactionStoreManager.java:81) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.session.DataBaseSessionManager.init(DataBaseSessionManager.java:77) [seata-server-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.initInstance(EnhancedServiceLoader.java:564) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.createNewExtension(EnhancedServiceLoader.java:395) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.getExtensionInstance(EnhancedServiceLoader.java:388) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.loadExtension(EnhancedServiceLoader.java:356) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.load(EnhancedServiceLoader.java:245) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.access$200(EnhancedServiceLoader.java:190) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader.load(EnhancedServiceLoader.java:82) [seata-common-1.4.2.jar:na]
+        at io.seata.server.session.SessionHolder.init(SessionHolder.java:97) [seata-server-1.4.2.jar:na]
+        at io.seata.server.Server.main(Server.java:80) [seata-server-1.4.2.jar:na]
+Caused by: java.lang.ClassNotFoundException: com/mysql//cj/jdbc/Driver
+        at java.lang.Class.forName0(Native Method) ~[na:1.8.0_362]
+        at java.lang.Class.forName(Class.java:264) ~[na:1.8.0_362]
+        at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:651) ~[druid-1.1.23.jar:1.1.23]
+        ... 20 common frames omitted
+<==
+
+20:13:14.849 ERROR --- [                     main] i.s.s.s.db.store.LogStoreDataBaseDAO     : query transaction_name size fail, com/mysql//cj/jdbc/Driver
+==>
+java.sql.SQLException: com/mysql//cj/jdbc/Driver
+        at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:653) ~[druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.resolveDriver(DruidDataSource.java:1201) ~[druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:876) ~[druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1378) ~[druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1374) ~[druid-1.1.23.jar:1.1.23]
+        at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98) ~[druid-1.1.23.jar:1.1.23]
+        at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryTableStructure(LogStoreDataBaseDAO.java:461) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.LogStoreDataBaseDAO.initTransactionNameSize(LogStoreDataBaseDAO.java:445) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.LogStoreDataBaseDAO.<init>(LogStoreDataBaseDAO.java:106) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.<init>(DataBaseTransactionStoreManager.java:96) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.getInstance(DataBaseTransactionStoreManager.java:81) [seata-server-1.4.2.jar:na]
+        at io.seata.server.storage.db.session.DataBaseSessionManager.init(DataBaseSessionManager.java:77) [seata-server-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.initInstance(EnhancedServiceLoader.java:564) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.createNewExtension(EnhancedServiceLoader.java:395) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.getExtensionInstance(EnhancedServiceLoader.java:388) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.loadExtension(EnhancedServiceLoader.java:356) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.load(EnhancedServiceLoader.java:245) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader$InnerEnhancedServiceLoader.access$200(EnhancedServiceLoader.java:190) [seata-common-1.4.2.jar:na]
+        at io.seata.common.loader.EnhancedServiceLoader.load(EnhancedServiceLoader.java:82) [seata-common-1.4.2.jar:na]
+        at io.seata.server.session.SessionHolder.init(SessionHolder.java:97) [seata-server-1.4.2.jar:na]
+        at io.seata.server.Server.main(Server.java:80) [seata-server-1.4.2.jar:na]
+Caused by: java.lang.ClassNotFoundException: com/mysql//cj/jdbc/Driver
+        at java.lang.Class.forName0(Native Method) ~[na:1.8.0_362]
+        at java.lang.Class.forName(Class.java:264) ~[na:1.8.0_362]
+        at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:651) ~[druid-1.1.23.jar:1.1.23]
+        ... 20 common frames omitted
+<==
+
+20:13:14.853  WARN --- [                     main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found

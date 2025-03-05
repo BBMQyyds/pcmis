@@ -2,11 +2,13 @@ package com.lzy.common.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.crypto.SecretKey;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -72,24 +74,26 @@ public class JWTProvider {
     }
 
     private Claims getClaimsFormToken(String token) {
-        Claims claims = null;
+        SecretKey key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
         try {
-            claims = Jwts.parser()
-                    .setSigningKey(secret)
-                    .parseClaimsJws(token)
-                    .getBody();
+            return Jwts.parser()
+                    .verifyWith(key)
+                    .build()
+                    .parseSignedClaims(token)
+                    .getPayload();
         } catch (Exception e) {
-            log.error("JWT格式验证失败:{}", token);
+            log.error("JWT格式验证失败:{}", token, e);
+            return null;
         }
-        return claims;
     }
 
     private String generateToken(Map<String, Object> claims) {
+        SecretKey key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
         return Jwts.builder()
-                .setSubject(claims.get("CLAIM_KEY_USERNAME").toString())
-                .setClaims(claims)
-                .setExpiration(generateExpirationDate())
-                .signWith(SignatureAlgorithm.HS512, secret)
+                .claims(claims)
+                .subject(claims.get("CLAIM_KEY_USERNAME").toString())
+                .expiration(generateExpirationDate())
+                .signWith(key)
                 .compact();
     }
 

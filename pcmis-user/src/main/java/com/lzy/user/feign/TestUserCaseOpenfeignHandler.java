@@ -9,4 +9,9 @@ public class TestUserCaseOpenfeignHandler implements TestUserCaseOpenfeign {
     public String openfeignTest(String data) {
         return "请检查数据是否正确";
     }
+
+    @Override
+    public String seataTest(String data) {
+        return "请检查事务是否正常";
+    }
 }

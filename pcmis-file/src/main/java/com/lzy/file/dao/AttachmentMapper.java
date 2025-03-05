@@ -1,7 +1,7 @@
 package com.lzy.file.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.lzy.common.entity.AttachmentEntity;
+import com.lzy.common.entity.db.AttachmentEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

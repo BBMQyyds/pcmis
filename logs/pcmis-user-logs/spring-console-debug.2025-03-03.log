@@ -1,0 +1,967 @@
+2025-03-03 09:09:13.660 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 09:09:14.290 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 09:09:16.423 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 09:09:16.814 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 09:09:16.823 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 09:09:16.823 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 09:09:16.824 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 09:09:16.824 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 09:09:16.825 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 09:09:16.825 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 09:09:17.067 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 09:09:17.072 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 09:09:17.077 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 09:09:17.109 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 09:09:17.113 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 09:09:17.116 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 09:09:17.121 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 09:09:17.125 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 09:09:17.126 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 09:09:17.129 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 09:09:17.134 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 09:09:17.138 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 09:09:17.142 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 09:09:17.147 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 09:09:17.151 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 09:09:17.155 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 09:09:17.158 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 09:09:17.161 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 09:09:17.467 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 09:09:17.471 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 09:09:17.476 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 09:09:17.513 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 09:09:17.540 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 09:09:18.501 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 09:09:18.502 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 09:09:18.502 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 09:09:19.844 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 09:09:19.854 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 09:09:19.855 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 09:09:19.856 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 09:09:19.856 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 09:09:19.857 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 09:09:19.857 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 09:09:20.094 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 09:09:20.102 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 09:09:20.109 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 09:09:20.158 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 09:09:20.161 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 09:09:20.168 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 09:09:20.174 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 09:09:20.176 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 09:09:20.179 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 09:09:20.182 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 09:09:20.186 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 09:09:20.190 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 09:09:20.193 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 09:09:20.197 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 09:09:20.200 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 09:09:20.203 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 09:09:20.206 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 09:09:20.554 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 09:09:20.556 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 09:09:20.559 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 09:09:20.590 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 09:09:20.613 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 09:09:20.803 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@5a572c17 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 09:09:21.471 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 09:09:21.472 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 09:09:21.473 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 09:09:23.723 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@e21f1cd will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 09:09:23.775 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@214db8da will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 09:09:23.834 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@4abc908 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 09:09:59.776 [http-nio-9040-exec-1] DEBUG reactor.util.Loggers - [debug,245] - Using Slf4j logging framework
+2025-03-03 09:09:59.828 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6b1485df will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 09:31:16.734 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3f938880 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 09:31:43.669 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@2b608ded will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 09:45:33.898 [http-nio-9041-exec-1] DEBUG reactor.util.Loggers - [debug,245] - Using Slf4j logging framework
+2025-03-03 09:45:33.961 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@28383d58 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 09:59:30.532 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7159f200 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 09:59:30.536 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@b667856 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 09:59:48.938 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7b9e0794 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 09:59:48.937 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3eacbb89 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 10:01:39.396 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3759fb55 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 10:01:39.396 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@1d58f354 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 10:01:53.896 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@5e62c21b will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 10:01:54.148 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@32f80af7 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 10:05:34.064 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@667ea549 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 10:05:34.623 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@c8f375a will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 10:05:46.032 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@5724a5b1 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 10:05:46.032 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6dd7bcb5 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 10:07:09.890 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-pcmis] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 10:07:09.983 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-pcmis] DEBUG c.a.c.n.r.NacosContextRefresher - [innerReceive,123] - Refresh Nacos config group=pcmis,dataId=pcmis-user.yaml,configInfo=pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 10:07:10.157 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-pcmis] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 10:07:10.289 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-pcmis] DEBUG c.a.c.n.r.NacosContextRefresher - [innerReceive,123] - Refresh Nacos config group=pcmis,dataId=pcmis-user.yaml,configInfo=pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 10:11:53.397 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@152c7109 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6cb194f5
+2025-03-03 10:11:53.398 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@dbc3e52 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@bc52a41
+2025-03-03 10:12:17.693 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 10:12:18.282 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 10:12:20.043 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 10:12:20.611 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 10:12:20.619 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 10:12:20.619 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 10:12:20.620 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 10:12:20.620 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 10:12:20.621 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 10:12:20.621 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 10:12:20.639 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 10:12:20.818 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 10:12:20.824 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 10:12:20.829 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 10:12:20.873 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 10:12:20.876 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 10:12:20.881 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 10:12:20.885 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 10:12:20.886 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 10:12:20.888 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 10:12:20.890 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 10:12:20.893 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 10:12:20.896 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 10:12:20.900 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 10:12:20.903 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 10:12:20.908 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 10:12:20.911 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 10:12:20.914 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 10:12:21.409 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 10:12:21.411 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 10:12:21.414 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 10:12:21.441 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 10:12:21.462 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 10:12:22.319 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 10:12:22.320 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 10:12:22.320 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 10:12:22.947 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 10:12:22.956 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 10:12:22.957 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 10:12:22.957 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 10:12:22.957 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 10:12:22.958 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 10:12:22.958 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 10:12:23.164 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 10:12:23.169 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 10:12:23.173 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 10:12:23.211 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 10:12:23.214 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 10:12:23.220 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 10:12:23.224 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 10:12:23.225 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 10:12:23.227 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 10:12:23.229 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 10:12:23.232 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 10:12:23.234 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 10:12:23.238 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 10:12:23.241 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 10:12:23.243 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 10:12:23.245 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 10:12:23.248 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 10:12:23.721 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 10:12:23.723 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 10:12:23.727 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 10:12:23.755 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 10:12:23.776 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 10:12:24.312 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@a540916 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2173e4d5
+2025-03-03 10:12:24.541 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 10:12:24.541 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 10:12:24.541 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 10:12:26.312 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7c83559c will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2173e4d5
+2025-03-03 10:12:26.347 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@46a145cc will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2173e4d5
+2025-03-03 10:12:26.394 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@4c685a53 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2173e4d5
+2025-03-03 10:13:09.196 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3f99ed35 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2173e4d5
+2025-03-03 10:13:09.197 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6d312f will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2173e4d5
+2025-03-03 14:51:59.902 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 14:52:00.553 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 14:52:02.451 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 14:52:03.180 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 14:52:03.191 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 14:52:03.191 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 14:52:03.193 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 14:52:03.194 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 14:52:03.194 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 14:52:03.195 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 14:52:03.235 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 14:52:03.422 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 14:52:03.427 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 14:52:03.432 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 14:52:03.468 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 14:52:03.470 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 14:52:03.476 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 14:52:03.479 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 14:52:03.480 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 14:52:03.482 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 14:52:03.484 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 14:52:03.486 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 14:52:03.489 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 14:52:03.492 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 14:52:03.495 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 14:52:03.498 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 14:52:03.500 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 14:52:03.502 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 14:52:04.056 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 14:52:04.058 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 14:52:04.062 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 14:52:04.096 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 14:52:04.122 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 14:52:05.221 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 14:52:05.223 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 14:52:05.223 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 14:52:06.101 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 14:52:06.111 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 14:52:06.112 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 14:52:06.113 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 14:52:06.114 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 14:52:06.114 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 14:52:06.115 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 14:52:06.399 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 14:52:06.407 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 14:52:06.415 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 14:52:06.461 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 14:52:06.463 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 14:52:06.470 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 14:52:06.474 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 14:52:06.475 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 14:52:06.478 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 14:52:06.481 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 14:52:06.485 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 14:52:06.489 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 14:52:06.494 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 14:52:06.497 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 14:52:06.500 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 14:52:06.504 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 14:52:06.508 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 14:52:07.175 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 14:52:07.178 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 14:52:07.182 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 14:52:07.223 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 14:52:07.253 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 14:52:07.509 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@14628dba will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@582ca1e2
+2025-03-03 14:52:08.381 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 14:52:08.382 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 14:52:08.382 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 14:52:10.397 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@a540916 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3691d4da
+2025-03-03 14:52:10.434 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@4c685a53 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3691d4da
+2025-03-03 14:52:10.494 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@4d1016c5 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@582ca1e2
+2025-03-03 14:55:07.094 [http-nio-9040-exec-1] DEBUG reactor.util.Loggers - [debug,245] - Using Slf4j logging framework
+2025-03-03 14:55:07.145 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@138809e1 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@582ca1e2
+2025-03-03 14:57:20.720 [http-nio-9041-exec-1] DEBUG reactor.util.Loggers - [debug,245] - Using Slf4j logging framework
+2025-03-03 14:57:20.767 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3f99ed35 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3691d4da
+2025-03-03 16:34:56.406 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7b3ffb49 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3691d4da
+2025-03-03 16:35:18.515 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 16:35:19.132 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 16:35:20.844 [main] DEBUG c.a.c.n.c.NacosPropertySourceBuilder - [loadNacosData,93] - Loading nacos data, dataId: 'pcmis-user.yaml', group: 'pcmis', data: pcmis-user:
+  test:
+    admin: jdsbbmq-new-user
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+    cache:
+      redis:
+        time-to-live: 1800s
+      cache-names: menus_cache
+      type: redis
+  cloud:
+    sentinel:
+      log:
+        dir: ./logs/pcmis-user-logs
+        file: sentinel.log
+        max-size: 10MB
+        retention-days: 30
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pcmis?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 2003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.lzy.common.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+2025-03-03 16:35:21.342 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 16:35:21.351 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 16:35:21.351 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 16:35:21.352 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 16:35:21.352 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 16:35:21.353 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 16:35:21.353 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 16:35:21.605 [main] DEBUG o.a.i.l.LogFactory - [setImplementation,105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-03-03 16:35:21.609 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 16:35:21.616 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 16:35:21.622 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 16:35:21.663 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 16:35:21.665 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 16:35:21.672 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 16:35:21.676 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 16:35:21.678 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 16:35:21.681 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 16:35:21.684 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 16:35:21.687 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 16:35:21.692 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 16:35:21.697 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 16:35:21.699 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 16:35:21.707 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 16:35:21.711 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 16:35:21.714 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 16:35:22.769 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 16:35:22.771 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserController:
+	
+2025-03-03 16:35:22.772 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 16:35:22.777 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 16:35:22.816 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 16:35:22.844 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 16:35:23.905 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 16:35:23.906 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 16:35:23.907 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 16:35:24.310 [main] DEBUG c.b.m.c.t.GlobalConfigUtils - [getGlobalConfig,106] - DeBug: MyBatis Plus Global configuration Initializing !
+2025-03-03 16:35:24.324 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectList
+2025-03-03 16:35:24.325 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.SelectObjs
+2025-03-03 16:35:24.326 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Insert
+2025-03-03 16:35:24.327 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Update
+2025-03-03 16:35:24.327 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Delete
+2025-03-03 16:35:24.328 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.baomidou.mybatisplus.core.mapper.SqlRunner.Count
+2025-03-03 16:35:24.604 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.insert
+2025-03-03 16:35:24.609 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.delete
+2025-03-03 16:35:24.613 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteByMap
+2025-03-03 16:35:24.647 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteById
+2025-03-03 16:35:24.649 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.deleteBatchIds
+2025-03-03 16:35:24.654 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.update
+2025-03-03 16:35:24.657 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.updateById
+2025-03-03 16:35:24.658 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectById
+2025-03-03 16:35:24.660 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectBatchIds
+2025-03-03 16:35:24.666 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectByMap
+2025-03-03 16:35:24.669 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectOne
+2025-03-03 16:35:24.672 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectCount
+2025-03-03 16:35:24.675 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMaps
+2025-03-03 16:35:24.677 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectMapsPage
+2025-03-03 16:35:24.679 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectObjs
+2025-03-03 16:35:24.682 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectList
+2025-03-03 16:35:24.686 [main] DEBUG c.b.m.c.MybatisConfiguration - [addMappedStatement,85] - addMappedStatement: com.lzy.user.dao.UserMapper.selectPage
+2025-03-03 16:35:25.510 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.HelloWorldController:
+	{GET [/user1/getUserConfigTest]}: getUserConfigTest()
+2025-03-03 16:35:25.511 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserController:
+	
+2025-03-03 16:35:25.512 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	c.l.u.c.UserTestOpenfeignController:
+	{ [/testUser/openfeignTest]}: openfeignTest(String)
+2025-03-03 16:35:25.516 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlerMethods,295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-03 16:35:25.540 [main] DEBUG _.s.w.s.H.Mappings - [detectHandlers,86] - 'beanNameHandlerMapping' {}
+2025-03-03 16:35:25.558 [main] DEBUG _.s.w.s.H.Mappings - [logMappings,177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-03 16:35:26.063 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@54d3cf4e will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@a80a896
+2025-03-03 16:35:26.344 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - [useSlf4JLoggerFactory,63] - Using SLF4J as the default logging framework
+2025-03-03 16:35:26.345 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,129] - -Dio.netty.leakDetection.level: simple
+2025-03-03 16:35:26.345 [main] DEBUG i.n.u.ResourceLeakDetector - [<clinit>,130] - -Dio.netty.leakDetection.targetRecords: 4
+2025-03-03 16:35:28.146 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@544450bc will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@4e4af370
+2025-03-03 16:35:28.181 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@795f5cd2 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@4e4af370
+2025-03-03 16:35:28.242 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6287632e will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@a80a896
+2025-03-03 16:35:55.462 [http-nio-9040-exec-1] DEBUG c.l.u.s.i.UserTestOpenfeignServiceImpl - [openfeignTest,19] - openfeignTest data:jdsbbmq-new-user
+2025-03-03 16:35:55.502 [http-nio-9040-exec-1] DEBUG reactor.util.Loggers - [debug,245] - Using Slf4j logging framework
+2025-03-03 16:35:55.549 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@3ec72b85 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@a80a896
+2025-03-03 16:36:01.040 [http-nio-9041-exec-1] DEBUG c.l.u.s.i.UserTestOpenfeignServiceImpl - [openfeignTest,19] - openfeignTest data:jd1sbbmq-new-user
+2025-03-03 16:36:01.079 [http-nio-9041-exec-1] DEBUG reactor.util.Loggers - [debug,245] - Using Slf4j logging framework
+2025-03-03 16:36:01.134 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@628611f1 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@4e4af370
+2025-03-03 17:10:11.581 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@23620573 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@a80a896
+2025-03-03 17:10:11.581 [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] DEBUG c.a.n.c.n.NotifyCenter - [notifySubscriber,193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@583be470 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@4e4af370

@@ -89,9 +89,3 @@ gateway:
 logging:
   level:
     org.springframework.cloud.gateway.route.CachingRouteLocator: off
-
-jwt:
-  tokenHeader: Authorization
-  secret: pcmis-jdsbbmq # 秘钥
-  expiration: 604800 # 7天
-  prefix: Bearer # token前缀
