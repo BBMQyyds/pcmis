@@ -1,2 +1,3 @@
-java -jar sentinel-dashboard-1.8.3.jar
+cd enve
+
 --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED

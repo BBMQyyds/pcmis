@@ -34,7 +34,7 @@ public class CaseTestOpenfeignController {
             queryWrapper.eq("case_id", 1);
             CaseEntity caseEntity = mybatisPlusTestService.getOne(queryWrapper);
             caseEntity.setComplainant("complainant");
-            System.out.println(1/0); // 这里抛出异常
+//            System.out.println(1/0); // 这里抛出异常
             mybatisPlusTestService.updateById(caseEntity);
             return "success";
         } catch (Exception e) {

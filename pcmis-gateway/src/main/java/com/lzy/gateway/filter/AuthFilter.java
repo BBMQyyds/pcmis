@@ -52,6 +52,11 @@ public class AuthFilter implements GlobalFilter, Ordered {
         ServerHttpRequest request = exchange.getRequest();
         String requestPath = request.getPath().toString();
 
+        //swagger暴露v3/api-docs
+        if (requestPath.contains("v3/api-docs") || requestPath.contains("v2/api-docs")) {
+            return chain.filter(exchange);
+        }
+
         boolean allowedPath = false;
         if (paths != null && !paths.isEmpty()) {
             allowedPath = StringUtils.checkSkipAuthUrls(requestPath, paths.split(","));

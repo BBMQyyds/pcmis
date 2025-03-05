@@ -26,10 +26,10 @@ public class UserTestOpenfeignController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/openfeignTest")
-    public String openfeignTest(String data) {
-        return userTestOpenfeignService.openfeignTest(data);
-    }
+//    @RequestMapping("/openfeignTest")
+//    public String openfeignTest(String data) {
+//        return userTestOpenfeignService.openfeignTest(data);
+//    }
 
     @RequestMapping("/seataTest")
     @GlobalTransactional
@@ -44,7 +44,8 @@ public class UserTestOpenfeignController {
 
             // 捕获 FeignException 并手动抛出 RuntimeException
             try {
-                userTestOpenfeignService.seataTest("test");
+
+                System.out.println(userTestOpenfeignService.seataTest("test"));
             } catch (FeignException e) {
                 log.error("Feign 调用失败，触发回滚", e);
                 throw new RuntimeException("Feign 调用异常导致事务回滚", e);
