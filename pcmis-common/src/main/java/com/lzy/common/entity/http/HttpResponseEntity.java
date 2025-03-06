@@ -3,6 +3,9 @@ package com.lzy.common.entity.http;
 import com.lzy.common.util.AESUtils;
 import lombok.*;
 
+/**
+ * HTTP响应实体类，用于封装HTTP请求的响应信息
+ */
 @Getter
 @Setter
 @ToString
@@ -81,7 +84,6 @@ public class HttpResponseEntity {
      *
      * @return 包含410响应码和消息的实体
      */
-
     public static HttpResponseEntity code410() {
         return new HttpResponseEntity(410, null, AESUtils.encode("验证码错误", AESUtils.KEY));
     }

@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义项目对象模型(POM)，用于描述和处理项目构建 -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 模型版本号 -->
     <modelVersion>4.0.0</modelVersion>
+    <!-- 父项目信息 -->
     <parent>
         <groupId>com.lzy</groupId>
         <artifactId>pcmis</artifactId>
         <version>1.0.0</version>
     </parent>
 
+    <!-- 当前项目的工件ID -->
     <artifactId>pcmis-gateway</artifactId>
 
+    <!-- 项目属性配置 -->
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- 项目依赖项 -->
     <dependencies>
 
-        <!--common-->
+        <!-- common依赖 -->
         <dependency>
             <groupId>com.lzy</groupId>
             <artifactId>pcmis-common</artifactId>
             <version>${project.version}</version>
         </dependency>
 
-        <!--gateway-->
+        <!-- Gateway依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
             <version>3.0.7</version>
         </dependency>
 
-        <!--sentinel-->
+        <!-- Sentinel依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
             <version>2021.0.4.0</version>
         </dependency>
 
-        <!--sentinel-core-->
+        <!-- Sentinel核心依赖 -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-core</artifactId>

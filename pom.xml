@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义XML文档的版本和编码方式 -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 指定模型版本 -->
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 定义父项目 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.6.4</version>
     </parent>
 
+    <!-- 定义项目坐标 -->
     <groupId>com.lzy</groupId>
     <artifactId>pcmis</artifactId>
     <version>1.0.0</version>
+    <!-- 指定打包方式 -->
     <packaging>pom</packaging>
+    <!-- 定义模块列表 -->
     <modules>
         <module>pcmis-common</module>
         <module>pcmis-project</module>
@@ -26,6 +32,7 @@
         <module>pcmis-gateway</module>
     </modules>
 
+    <!-- 定义项目属性 -->
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
@@ -34,28 +41,28 @@
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
     </properties>
 
+    <!-- 定义项目依赖 -->
     <dependencies>
-
-        <!--springboot-->
+        <!-- Spring Boot 核心依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!--springboot test-->
+        <!-- Spring Boot 测试依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!--springboot web-->
+        <!-- Spring Boot Web 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--springboot cloud-->
+        <!-- Spring Cloud 依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-dependencies</artifactId>
@@ -64,7 +71,7 @@
             <scope>import</scope>
         </dependency>
 
-        <!--springboot alibaba-->
+        <!-- Spring Cloud Alibaba 依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -73,15 +80,15 @@
             <scope>import</scope>
         </dependency>
 
-        <!--springboot alibaba seata-->
+        <!-- Spring Cloud Alibaba Seata 依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
             <version>${spring-cloud-alibaba.version}</version>
         </dependency>
-
     </dependencies>
 
+    <!-- 定义构建插件 -->
     <build>
         <plugins>
             <plugin>

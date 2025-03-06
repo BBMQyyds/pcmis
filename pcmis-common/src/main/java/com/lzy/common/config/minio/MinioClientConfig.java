@@ -13,14 +13,20 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.List;
 
+// 使用slf4j日志工厂获取日志对象
 @Slf4j
+// Spring组件注解，自动装配到Spring上下文中
 @Component
+// Spring配置类注解，表示该类可以提供@Bean注解的方法
 @Configuration
 public class MinioClientConfig {
 
+    // 静态日志对象
     private static final Logger logger = LoggerFactory.getLogger(MinioClientConfig.class);
+    // 静态Minio客户端对象
     private static MinioClient minioClient;
 
+    // 自动装配存储属性配置
     @Autowired
     private StorageProperty storageProperty;
 
@@ -60,11 +66,13 @@ public class MinioClientConfig {
     @PostConstruct
     public void init() {
         try {
+            // 根据存储属性构建MinioClient实例
             minioClient = MinioClient.builder()
                     .endpoint(storageProperty.getUrl())
                     .credentials(storageProperty.getAccessKey(), storageProperty.getSecretKey())
                     .build();
         } catch (Exception e) {
+            // 异常日志记录
             logger.error("Exception: ", e);
         }
     }

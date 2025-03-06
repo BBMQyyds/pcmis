@@ -7,12 +7,9 @@ import org.slf4j.LoggerFactory;
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-
 public class AESUtils {
-
     // 密钥 (需要前端和后端保持一致)
     public static final String KEY = "1234567890abcdef";
-
     // 偏移量
     public static final String VIPARA = "1234567890abcdef";
     // 编码方式
@@ -30,7 +27,6 @@ public class AESUtils {
      * @return 加密后的内容
      */
     public static String encode(String contents, String key) {
-
         if (contents == null || contents.isEmpty()) {
             return contents;
         }
@@ -43,29 +39,21 @@ public class AESUtils {
              * 依据这三个参数可以创建很多种加密方式
              */
             Cipher cipher = Cipher.getInstance(CBC_PKCS5_PADDING);
-
             // 偏移量
             IvParameterSpec zeroIv = new IvParameterSpec(VIPARA.getBytes(CODE_TYPE));
-
             byte[] byteContent = contents.getBytes(CODE_TYPE);
-
             // 使用加密秘钥
             SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(CODE_TYPE), AES);
-
             // 初始化为加密模式的密码器
             cipher.init(Cipher.ENCRYPT_MODE, skeySpec, zeroIv);
-
             // 加密
             byte[] result = cipher.doFinal(byteContent);
-
             // 通过Base64转码返回
             return Base64.encodeBase64String(result);
         } catch (Exception e) {
             log.error("AES加密失败", e);
         }
-
         return null;
-
     }
 
     /**
@@ -79,23 +67,17 @@ public class AESUtils {
         if (content == null || content.isEmpty()) {
             return content;
         }
-
         try {
             // 实例化
             Cipher cipher = Cipher.getInstance(CBC_PKCS5_PADDING);
             IvParameterSpec zeroIv = new IvParameterSpec(VIPARA.getBytes(CODE_TYPE));
-
             SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(CODE_TYPE), AES);
             cipher.init(Cipher.DECRYPT_MODE, skeySpec, zeroIv);
-
             byte[] result = cipher.doFinal(Base64.decodeBase64(content));
-
             return new String(result, CODE_TYPE);
         } catch (Exception e) {
             log.error("AES解密失败", e);
         }
-
         return null;
     }
-
 }

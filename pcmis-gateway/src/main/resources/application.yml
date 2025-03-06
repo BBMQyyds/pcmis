@@ -1,91 +1,82 @@
 server:
-  port: 9100
+  port: 9100  # 服务器端口设置为9100
 
 spring:
   application:
-    name: pcmis-gateway
+    name: pcmis-gateway  # 应用名称设置为pcmis-gateway
   cloud:
-    sentinel:
+    sentinel:  # Spring Cloud Alibaba Sentinel配置
       transport:
-        port: 8719
-        dashboard: localhost:8080
-      eager: true
+        port: 8719  # Sentinel与控制台通信的端口
+        dashboard: localhost:8080  # Sentinel控制台地址
+      eager: true  # 启用急切模式，即在配置中心更新规则后立即生效
       scg:
         fallback:
-          response-body: '{"code":-666, "data":null, "msg":"前方拥堵，请稍后重试"}'
-          mode: response
-          response-status: 500
-      datasource:
-        flow-control:
-          nacos:
-            username: nacos
-            password: 2003
-            server-addr: localhost:8848
-            data-id: gateway-sentinel-flow
-            data-type: json
-            group-id: pcmis
-            namespace: pcmis
-            rule-type: flow
-        degrade-control:
-          nacos:
-            username: nacos
-            password: 2003
-            server-addr: localhost:8848
-            data-id: gateway-sentinel-degrade
-            data-type: json
-            group-id: pcmis
-            namespace: pcmis
-            rule-type: degrade
-        param-control:
-          nacos:
-            username: nacos
-            password: 2003
-            server-addr: localhost:8848
-            data-id: gateway-sentinel-param
-            data-type: json
-            group-id: pcmis
-            namespace: pcmis
-            rule-type: param-flow
-        #        system-control:
-        #            nacos:
-        #                username: nacos
-        #                password: 2003
-        #                server-addr: localhost:8848
-        #                data-id: gateway-sentinel-system
-        #                data-type: json
-        #                group-id: pcmis
-        #                namespace: pcmis
-        #                rule-type: system
-        authority-control:
-          nacos:
-            username: nacos
-            password: 2003
-            server-addr: localhost:8848
-            data-id: gateway-sentinel-authority
-            data-type: json
-            group-id: pcmis
-            namespace: pcmis
-            rule-type: authority
-    nacos:
+          response-body: '{"code":-666, "data":null, "msg":"前方拥堵，请稍后重试"}'  # 全局降级响应内容
+          mode: response  # 降级模式设置为response
+          response-status: 500  # 降级响应状态码
+      datasource:  # 数据源配置
+        flow-control:  # 流控规则配置
+          nacos:  # 使用Nacos作为配置中心
+            username: nacos  # Nacos用户名
+            password: 2003  # Nacos密码
+            server-addr: localhost:8848  # Nacos服务器地址
+            data-id: gateway-sentinel-flow  # 流控规则的dataId
+            data-type: json  # 数据类型为json
+            group-id: pcmis  # Nacos分组ID
+            namespace: pcmis  # Nacos命名空间
+            rule-type: flow  # 规则类型为流控
+        degrade-control:  # 降级规则配置
+          nacos:  # 使用Nacos作为配置中心
+            username: nacos  # Nacos用户名
+            password: 2003  # Nacos密码
+            server-addr: localhost:8848  # Nacos服务器地址
+            data-id: gateway-sentinel-degrade  # 降级规则的dataId
+            data-type: json  # 数据类型为json
+            group-id: pcmis  # Nacos分组ID
+            namespace: pcmis  # Nacos命名空间
+            rule-type: degrade  # 规则类型为降级
+        param-control:  # 参数限流规则配置
+          nacos:  # 使用Nacos作为配置中心
+            username: nacos  # Nacos用户名
+            password: 2003  # Nacos密码
+            server-addr: localhost:8848  # Nacos服务器地址
+            data-id: gateway-sentinel-param  # 参数限流规则的dataId
+            data-type: json  # 数据类型为json
+            group-id: pcmis  # Nacos分组ID
+            namespace: pcmis  # Nacos命名空间
+            rule-type: param-flow  # 规则类型为参数限流
+        # system-control配置被注释掉，未启用
+        authority-control:  # 授权规则配置
+          nacos:  # 使用Nacos作为配置中心
+            username: nacos  # Nacos用户名
+            password: 2003  # Nacos密码
+            server-addr: localhost:8848  # Nacos服务器地址
+            data-id: gateway-sentinel-authority  # 授权规则的dataId
+            data-type: json  # 数据类型为json
+            group-id: pcmis  # Nacos分组ID
+            namespace: pcmis  # Nacos命名空间
+            rule-type: authority  # 规则类型为授权
+    nacos:  # Nacos配置
       discovery:
-        server-addr: localhost:8848
-        namespace: pcmis
-        group: pcmis
+        server-addr: localhost:8848  # Nacos服务器地址
+        namespace: pcmis  # Nacos命名空间
+        group: pcmis  # Nacos分组
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: true  # 启用Gateway的Service自动发现和路由规则生成
   main:
-    web-application-type: reactive
-    allow-bean-definition-overriding: true
+    web-application-type: reactive  # 设置应用类型为reactive
+    allow-bean-definition-overriding: true  # 允许Bean定义覆盖
 
 gateway:
   routes:
     config:
-      data-id: gateway-routes
-      group: pcmis
-      namespace: pcmis
+      data-id: gateway-routes  # Gateway路由规则的dataId
+      group: pcmis  # 路由规则所属分组
+      namespace: pcmis  # 路由规则所属命名空间
 
 logging:
   level:
-    org.springframework.cloud.gateway.route.CachingRouteLocator: off
+    org.springframework.cloud.gateway.route.CachingRouteLocator: off  # 关闭CachingRouteLocator的日志输出

@@ -1,6 +1,5 @@
 package com.lzy.common.util;
 
-
 import com.lzy.common.config.minio.MinioClientConfig;
 import io.minio.GetObjectArgs;
 import io.minio.MinioClient;
@@ -16,10 +15,15 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
+/**
+ * minio工具类
+ * 提供了一系列操作minio的方法，包括上传、下载、压缩等
+ */
 @Slf4j
 @Component
 public class MinioUtils {
 
+    // 使用slf4j日志工厂获取日志对象
     private static final Logger logger = LoggerFactory.getLogger(MinioUtils.class);
 
     /**

@@ -11,13 +11,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * MybatisPlus测试控制器
+ */
 @RestController
 @RequestMapping("/testmp")
 public class MybatisPlusTestController {
 
+    /**
+     * 注入MybatisPlus测试服务
+     */
     @Autowired
     private MybatisPlusTestService mybatisPlusTestService;
 
+    /**
+     * 执行MybatisPlus相关测试查询
+     *
+     * @return 包含查询结果的Map对象
+     */
     @RequestMapping("/test")
     public Map<String, Object> MPTest() {
         // 初始化返回类

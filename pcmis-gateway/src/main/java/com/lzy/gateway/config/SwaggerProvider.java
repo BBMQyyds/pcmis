@@ -1,18 +1,24 @@
 package com.lzy.gateway.config;
 
+// SwaggerProvider类提供了Swagger资源的获取功能，用于在Spring Cloud Gateway中集成Swagger
+// 该类实现了SwaggerResourcesProvider接口，以提供自定义的Swagger资源列表
 //@Component
 //@Primary
 public class SwaggerProvider {
 //public class SwaggerProvider implements SwaggerResourcesProvider {
 //    public static final String API_URI = "/v2/api-docs";
+//    // RouteLocator用于获取路由信息
 //    private final RouteLocator routeLocator;
+//    // GatewayProperties包含网关的配置属性
 //    private final GatewayProperties gatewayProperties;
 //
+//    // 构造函数注入RouteLocator和GatewayProperties
 //    public SwaggerProvider(RouteLocator routeLocator, GatewayProperties gatewayProperties) {
 //        this.routeLocator = routeLocator;
 //        this.gatewayProperties = gatewayProperties;
 //    }
 //
+//    // 获取Swagger资源列表
 //    @Override
 //    public List<SwaggerResource> get() {
 //        List<SwaggerResource> resources = new ArrayList<>();
@@ -27,6 +33,7 @@ public class SwaggerProvider {
 //                        .forEach(predicateDefinition -> {
 //                                    String routeId = routeDefinition.getId();
 //                                    String swaggerInfo = ServerRouteEnum.getSwaggerInfoByRoutId(routeId);
+//                                    // 这里重复的打印语句可能是为了调试，应考虑移除
 //                                    System.out.println("routeId: " + routeId + " swaggerInfo: " + swaggerInfo);
 //                                    System.out.println("routeId: " + routeId + " swaggerInfo: " + swaggerInfo);
 //                                    System.out.println("routeId: " + routeId + " swaggerInfo: " + swaggerInfo);
@@ -43,6 +50,7 @@ public class SwaggerProvider {
 //        return resources;
 //    }
 //
+//    // 创建SwaggerResource实例
 //    private SwaggerResource swaggerResource(String name, String location) {
 //        SwaggerResource swaggerResource = new SwaggerResource();
 //        swaggerResource.setName(name);

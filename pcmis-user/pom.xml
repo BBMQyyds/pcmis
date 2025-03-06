@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义项目对象模型(POM)文件的版本和编码 -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 指定POM模型的版本 -->
     <modelVersion>4.0.0</modelVersion>
+    <!-- 定义项目的父项目 -->
     <parent>
+        <!-- 父项目的组ID -->
         <groupId>com.lzy</groupId>
+        <!-- 父项目的工件ID -->
         <artifactId>pcmis</artifactId>
+        <!-- 父项目的版本 -->
         <version>1.0.0</version>
     </parent>
 
+    <!-- 当前项目的工件ID -->
     <artifactId>pcmis-user</artifactId>
 
+    <!-- 定义项目属性 -->
     <properties>
+        <!-- 指定编译源代码使用的Java版本 -->
         <maven.compiler.source>18</maven.compiler.source>
+        <!-- 指定编译目标代码使用的Java版本 -->
         <maven.compiler.target>18</maven.compiler.target>
+        <!-- 指定项目源代码的编码 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- 定义项目的依赖关系 -->
     <dependencies>
+        <!-- 单个依赖项 -->
         <dependency>
+            <!-- 依赖项的组ID -->
             <groupId>com.lzy</groupId>
+            <!-- 依赖项的工件ID -->
             <artifactId>pcmis-common</artifactId>
+            <!-- 依赖项的版本，使用当前项目的版本 -->
             <version>${project.version}</version>
         </dependency>
     </dependencies>

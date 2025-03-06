@@ -8,16 +8,19 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
-
 @Configuration
 @EnableAsync
 public class ExecutorConfig {
+    // 从配置文件中读取核心线程数
     @Value("${async.executor.thread.core_pool_size}")
     private int corePoolSize; // 核心线程数
+    // 从配置文件中读取最大线程数
     @Value("${async.executor.thread.max_pool_size}")
     private int maxPoolSize; // 最大线程数
+    // 从配置文件中读取队列容量
     @Value("${async.executor.thread.queue_capacity}")
     private int queueCapacity; // 队列容量
+    // 从配置文件中读取线程名称前缀
     @Value("${async.executor.thread.name_prefix}")
     private String namePrefix; // 线程名称前缀
 
@@ -47,7 +50,7 @@ public class ExecutorConfig {
     }
 
     /**
-     * 配置异步任务执行器
+     * 配置另一个异步任务执行器，使用固定资源池
      *
      * @return 异步任务执行器
      */

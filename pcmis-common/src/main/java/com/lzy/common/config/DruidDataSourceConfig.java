@@ -15,10 +15,17 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+/**
+ * Druid数据源配置类
+ */
 @Configuration
 public class DruidDataSourceConfig {
 
+    /**
+     * 创建并配置Druid数据源
+     *
+     * @return 配置好的Druid数据源实例
+     */
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     @ConditionalOnProperty(name = "spring.datasource.type", havingValue = "com.alibaba.druid.pool.DruidDataSource")
@@ -26,6 +33,11 @@ public class DruidDataSourceConfig {
         return new DruidDataSource();
     }
 
+    /**
+     * 配置Druid的统计视图Servlet
+     *
+     * @return StatViewServlet的ServletRegistrationBean实例
+     */
     @Bean
     @ConditionalOnClass(DruidDataSource.class)
     public ServletRegistrationBean statViewServlet() {
@@ -40,6 +52,8 @@ public class DruidDataSourceConfig {
 
     /**
      * 配置一个web监控的filter
+     *
+     * @return WebStatFilter的FilterRegistrationBean实例
      */
     @Bean
     @ConditionalOnClass(DruidDataSource.class)

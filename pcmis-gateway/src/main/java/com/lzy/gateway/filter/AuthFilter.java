@@ -19,11 +19,13 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
-
 @Component
 @Slf4j
+/**
+ * 权限过滤器，用于全局过滤请求，验证JWT token
+ * 实现了GlobalFilter和Ordered接口，以定义过滤器的执行顺序
+ */
 public class AuthFilter implements GlobalFilter, Ordered {
-
 
     @Autowired
     private JWTProvider jwtProvider;
@@ -40,11 +42,21 @@ public class AuthFilter implements GlobalFilter, Ordered {
     @Value("${allowed.paths}")
     private String paths;// 不需要验证的路径
 
+    /**
+     * 返回过滤器的执行顺序，数值越小，优先级越高
+     * @return 过滤器的执行顺序
+     */
     @Override
     public int getOrder() {
         return 0;
     }
 
+    /**
+     * 过滤请求的方法
+     * @param exchange 服务器Web交换对象，包含请求和响应
+     * @param chain 过滤器链，用于将控制权转交给下一个过滤器
+     * @return Mono<Void> 表示异步处理完成
+     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         log.info("=========================请求进入filter=========================");
@@ -52,11 +64,12 @@ public class AuthFilter implements GlobalFilter, Ordered {
         ServerHttpRequest request = exchange.getRequest();
         String requestPath = request.getPath().toString();
 
-        //swagger暴露v3/api-docs
+        // 放行Swagger的API文档请求
         if (requestPath.contains("v3/api-docs") || requestPath.contains("v2/api-docs")) {
             return chain.filter(exchange);
         }
 
+        // 检查是否是不需要验证的路径
         boolean allowedPath = false;
         if (paths != null && !paths.isEmpty()) {
             allowedPath = StringUtils.checkSkipAuthUrls(requestPath, paths.split(","));
@@ -79,8 +92,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
                 return writeResponse(exchange.getResponse(), 401, "token验证失败或已过期...请重新登录");
             }
 
-            String trimAuthToken = authToken.trim();
-            if (!trimAuthToken.equals(token.toString())) {
+            if (!authToken.equals(token.toString())) {
                 log.error("token验证失败...");
                 return writeResponse(exchange.getResponse(), 401, "token验证失败或已过期...请重新登录");
             }
@@ -92,6 +104,13 @@ public class AuthFilter implements GlobalFilter, Ordered {
         return chain.filter(exchange);
     }
 
+    /**
+     * 写入响应的方法
+     * @param response 服务器HTTP响应对象
+     * @param code 响应状态码
+     * @param msg 响应消息
+     * @return Mono<Void> 表示异步处理完成
+     */
     protected Mono<Void> writeResponse(ServerHttpResponse response, Integer code, String msg) {
         JSONObject message = new JSONObject();
         message.put("code", code);
