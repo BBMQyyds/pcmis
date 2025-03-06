@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
@@ -19,6 +20,7 @@ import java.util.List;
 @Component
 // Spring配置类注解，表示该类可以提供@Bean注解的方法
 @Configuration
+@EnableConfigurationProperties(StorageProperty.class)
 public class MinioClientConfig {
 
     // 静态日志对象
